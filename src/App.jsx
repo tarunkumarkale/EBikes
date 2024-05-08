@@ -1,11 +1,15 @@
-import React from 'react'
+
+import Header from './components/Header';
+import Hero from './components/Hero';
 
 const App = () => {
   return (
-    <div>
-<h1 className='text-red-300'>hello taun</h1>      
-    </div>
-  )
-}
+     <>
+    
+    <Hero></Hero>
+    </>
+  );
+};
 
-export default App
+export default App;
+
