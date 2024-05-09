@@ -19,13 +19,14 @@ import two from "../assets/img/two.jpg"
 import vivamus from "../assets/img/vivamus.jpg"
 import x1b from "../assets/img/x1b.jpg"
 import X2 from "../assets/img/X2.jpg"
+import model from "../assets/img/model.jpg"
 
 
 
 
 
 // export default home1
-export  {home2,home3,home4,home1,X2}
+export  {home2,home3,home4,home1,X2,model}
 
 
   
