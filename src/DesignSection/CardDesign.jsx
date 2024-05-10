@@ -6,40 +6,39 @@ const HeroDesign=()=> {
 	return (
 		<>
 			<center>
-				<h1 className="text-green-600 text-4xl">
+				<h1 classNameName="text-green-600 text-4xl">
 					GeeksforGeeks
 				</h1>
-				<h2 className="text-black text-2xl">
+				<h2 classNameName="text-black text-2xl">
 					Text appears on Hover over image using
 					Tailwind CSS in React
 				</h2>
 			</center>
-			<div class="flex items-center justify-center mt-12">
+			<div className="flex items-center justify-center mt-12">
 				<a
-					class="relative block w-1/4 bg-gray-900 group"
+					className="relative block w-1/4 bg-gray-900 group"
 					href="##"
 				>
 					<img
-						class="absolute inset-0 object-cover 
+						className="absolute inset-0 object-cover 
 								w-full h-full group-hover:opacity-50"
 						src="https://media.geeksforgeeks.org/wp-content/uploads/20220221132017/download.png"
 					/>
-					<div class="relative p-5">
-						<div class="mt-40">
-							{/* Hidden content */}
+					<div className="relative p-5">
+						<div className="mt-40">
 							<div
-								class="transition-all transform 
+								className="transition-all transform 
 								translate-y-8 opacity-0 
 								group-hover:opacity-100 
 								group-hover:translate-y-0"
 							>
-								<div class="p-2">
-									<p class="text-lg text-white">
+								<div className="p-2">
+									<p className="text-lg text-white">
 										Welcome to
 										GeeksforGeeks.
 									</p>
 									<button
-										class="px-4 py-2 text-sm 
+										className="px-4 py-2 text-sm 
 											text-white bg-green-600"
 									>
 										Visit site
