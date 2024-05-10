@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,81 +45,71 @@ const Header = () => {
           {isOpen ? (
             <div className="right-0 mt-2 w-[100%] h-auto bg-white rounded-lg shadow-lg  ">
               <div className="py-2">
-                <a
-                  href="#"
+                <Link to="#"
                   className="block px-4 py-2 text-gray-800  hover:text-green-700 hover:bg-gray-200 text-center headingLink poetsen-one-regular2"
                 >
                   Home
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link to="#"
                   className="block px-4 py-2 text-gray-800  hover:text-green-700 hover:bg-gray-200 text-center headingLink poetsen-one-regular2"
                 >
                   About
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link to=""
                   className="block px-4 py-2 text-gray-800  hover:text-green-700 hover:bg-gray-200 text-center headingLink poetsen-one-regular2"
                 >
                   Services
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link to=""
                   className="block px-4 py-2 text-gray-800  hover:text-green-700 hover:bg-gray-200 text-center headingLink poetsen-one-regular2"
                 >
                   Bicycles
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link to=""
                   className="block px-4 py-2 text-gray-800  hover:text-green-700 hover:bg-gray-200 text-center headingLink poetsen-one-regular2"
                 >
                   Contacts
-                </a>
+                </Link>
               </div>
             </div>
           ) : (
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
               <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  headBackground md:dark:bg-gray-900 dark:border-gray-700">
                 <li>
-                  <a
-                    href="#"
+                  <Link to=""
                     class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent  md:p-0 dark:text-white  headingLink poetsen-one-regular2"
                     aria-current="page"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link to=""
                     class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent  md:p-0 dark:text-white  headingLink poetsen-one-regular2"
                   >
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link to=""
                     class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent  md:p-0 dark:text-white  headingLink poetsen-one-regular2"
                   >
                     Services
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link to=""
                     class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent  md:p-0 dark:text-white  headingLink poetsen-one-regular2"
                   >
                     Bicycles
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link to=""
                     class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent  md:p-0 dark:text-white  headingLink poetsen-one-regular2"
                   >
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
