@@ -6,7 +6,7 @@ let option=["Bikes,E Bikes,Rent Bikes"]
 
 
   return (
-    <div className='flex w-full border border-red-400 h-24'>
+    <div className='flex w-full  h-24'>
 <div className='w-[25%] shadow-md'>
 <div className="wrap-input-3">
   <input className="input  " type="text" placeholder="Search......." />

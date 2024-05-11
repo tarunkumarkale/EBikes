@@ -23,4 +23,4 @@ import model from "../assets/img/model.jpg";
 
 
 
-export { home2, home3, home4, home1, X2, model };
+export { home2, home3, home4, home1, model,dolor,T_Rex,one,ipsum,saittis,odio,two,x1b,X2,consectetur,doodleNocturnalv3 };
