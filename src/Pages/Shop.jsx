@@ -1,6 +1,7 @@
 import React from 'react'
-import ShopDesign from '../DesignSection/ShopDesign'
 import ShopDesignMidSection from '../DesignSection/ShopDesignMidSection'
+import ShopDesign from '../DesignSection/ShopDesign'
+
 
 
 const Shop = () => {

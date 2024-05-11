@@ -1,5 +1,8 @@
 import React from 'react'
+
 import { T_Rex,one,ipsum,saittis,odio,two,x1b,X2,consectetur,doodleNocturnalv3} from "../constant/Index"
+
+ 
 const Cards = () => {
   return (
     <div className='w-[75%] flex justify-around gap-28 flex-wrap'>
