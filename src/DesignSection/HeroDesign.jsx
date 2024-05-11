@@ -1,7 +1,12 @@
 import React from "react";
 import { model } from "../constant/Index";
+import { useNavigate } from "react-router-dom";
+
 
 const HeroDesign = () => {
+  const GoToShop=useNavigate()
+
+  
   return (
     <>
       <div className="image-container relative w-[100%]">
@@ -15,7 +20,7 @@ const HeroDesign = () => {
           </p>
 
           <div className="flex justify-center items-center">
-            <button className="btn-60 sm:w-12">
+            <button className="btn-60 sm:w-12  " onClick={()=>GoToShop("/Shop")}>
               <span>Explore</span>
             </button>
           </div>

@@ -60,10 +60,10 @@ const Header = () => {
                 >
                   Services
                 </Link>
-                <Link to=""
+                <Link to="/Shop"
                   className="block px-4 py-2 text-gray-800  hover:text-green-700 hover:bg-gray-200 text-center headingLink poetsen-one-regular2"
                 >
-                  Bicycles
+                  Shop
                 </Link>
                 <Link to=""
                   className="block px-4 py-2 text-gray-800  hover:text-green-700 hover:bg-gray-200 text-center headingLink poetsen-one-regular2"
@@ -98,10 +98,10 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to=""
+                  <Link to="/Shop"
                     class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent  md:p-0 dark:text-white  headingLink poetsen-one-regular2"
                   >
-                    Bicycles
+                    Shop
                   </Link>
                 </li>
                 <li>
