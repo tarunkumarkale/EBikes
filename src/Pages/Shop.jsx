@@ -6,7 +6,7 @@ import ShopDesign from '../DesignSection/ShopDesign'
 
 const Shop = () => {
   return (
-    <div>
+    <div className=''>
       <ShopDesign></ShopDesign>
       <ShopDesignMidSection></ShopDesignMidSection>
     </div>

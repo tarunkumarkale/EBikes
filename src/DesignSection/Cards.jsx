@@ -3,11 +3,14 @@ import React from 'react'
 import { T_Rex,one,ipsum,saittis,odio,two,x1b,X2,consectetur,doodleNocturnalv3} from "../constant/Index"
 
  
-const Cards = () => {
+const Cards = ({isopen}) => {
+
+
+  
   return (
-    <div className='w-[75%] flex justify-around gap-28 flex-wrap'>
+    <div className='w-[75%] flex justify-around gap-24 flex-wrap'>
       
-<div className="w-56 h-auto bg-white shadow-lg rounded-lg overflow-hidden">
+<div className="w-44 sm:w-56  h-auto bg-white shadow-lg rounded-lg overflow-hidden">
   <div className="relative group">
     <img
       className="w-full h-auto"

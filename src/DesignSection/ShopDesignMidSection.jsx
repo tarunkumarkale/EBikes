@@ -1,31 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Cards from "./Cards";
 
 const ShopDesignMidSection = () => {
 
+
+
+
+const [isopen,setisopen]=useState(false)
+
+const fun=()=>{
+ setisopen(pre=>!pre) 
+ }
+
+
+
 const Pagination=()=>{
 return(
-  
-//   <div className="flex justify-center items-center mt-6">
-//   <nav aria-label="Page navigation example">
-// <ul class="inline-flex -space-x-px text-sm">
-//   <li>
-//     <a href="#" class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
-//   </li>
-//   <li>
-//     <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
-//   </li>
-//   <li>
-//     <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
-//   </li>
-//   <li>
-//     <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
-//   </li>
-// </ul>
-// </nav>
-
-
-//   </div>
+ 
 <div class="flex justify-center items-center mt-16">
   <nav aria-label="Page navigation example">
     <ul class="inline-flex -space-x-px text-lg">
@@ -52,21 +43,25 @@ return(
 
   return (
     <>
-    <div>
-      <div className="flex w-full  h-auto">
-        <div className="w-[25%]  shadow-lg">
-          <div className="flex flex-col ml-4 ">
-            <h1>Product Categories</h1>
-          </div>
+    <div className="flex-col md:flex-row w-full h-auto">
+        <div className="w-full md:w-[25%]  shadow-lg h-full ">
+
+<button onClick={fun}> Products Categories</button>
+
+{
+  isopen &&
+    <ul className="mt-4">
+          <li className="text-gray-800">Item 1</li>
+          <li className="text-gray-800">Item 2</li>
+          <li className="text-gray-800">Item 3</li>
+        </ul>
+}
+
+  
         </div>
-        <Cards></Cards>
-        
-      </div>
+<Cards  isopen={isopen}/>
     </div>
-
     <Pagination></Pagination>
-
-
 
 </>
 
