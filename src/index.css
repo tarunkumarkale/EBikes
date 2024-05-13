@@ -229,3 +229,14 @@ padding-left: 10px;
 
 
 /* input end*/
+
+
+.cardsContainer {
+  /* Your default styles */
+  z-index: 0;
+}
+
+.cardsContainerClicked {
+  /* Styles when button is clicked */
+  z-index: -1;
+}

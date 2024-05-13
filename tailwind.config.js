@@ -5,7 +5,11 @@ export default {
     'node_modules/flowbite-react/lib/esm/**/*.js'
   ],
   theme: {
-  
+    extend: {
+      zIndex: {
+        '-1': '-1',
+      },
+    },
   },
   plugins: [
     require('flowbite/plugin')
