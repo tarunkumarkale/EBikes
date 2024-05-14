@@ -72,6 +72,8 @@ import Header from './components/Header';
 import Hero from './Pages/Hero';
 import Shop from './Pages/Shop';
 import Contacts from './components/Contacts';
+import Footer from './components/Footer';
+
 
 const App = () => {
   return (
@@ -99,6 +101,9 @@ const MainCont = () => {
                 </section>
                 <section className="padding-x sm:py-32 py-16 w-full">
                   <Contacts />
+                </section>
+                <section className="padding-x sm:py-32 py-16 w-full">
+                  <Footer />
                 </section>
               </>
             }
