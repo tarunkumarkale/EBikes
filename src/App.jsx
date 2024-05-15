@@ -15,6 +15,7 @@ const App = () => {
       <Router basename="/EBikes">
         <Header />
         <MainCont />
+        <Footer></Footer>
       </Router>
     </div>
   );
@@ -37,9 +38,9 @@ const MainCont = () => {
                 <section className="padding-x sm:py-32 py-16 w-full">
                   <Contacts />
                 </section>
-                <section className="padding-x sm:py-32 py-16 w-full">
+                {/* <section className="padding-x sm:py-32 py-16 w-full">
                   <Footer />
-                </section>
+                </section> */}
               </>
             }
           />
