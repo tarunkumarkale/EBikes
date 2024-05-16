@@ -50,7 +50,7 @@ const Header = () => {
                 >
                   Home
                 </Link>
-                <Link to="#"
+                <Link to="/About"
                   className="block px-4 py-2 text-gray-800  hover:text-green-700 hover:bg-gray-200 text-center headingLink poetsen-one-regular2"
                 >
                   About
@@ -76,7 +76,7 @@ const Header = () => {
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
               <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  headBackground md:dark:bg-gray-900 dark:border-gray-700">
                 <li>
-                  <Link to=""
+                  <Link to="/"
                     class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent  md:p-0 dark:text-white  headingLink poetsen-one-regular2"
                     aria-current="page"
                   >
@@ -84,7 +84,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to=""
+                  <Link to="/About"
                     class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent  md:p-0 dark:text-white  headingLink poetsen-one-regular2"
                   >
                     About

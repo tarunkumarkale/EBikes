@@ -51,7 +51,7 @@ const Description = () => {
   let final_Desc = Desc.slice(0, 800); // Truncate the description
 
   return (
-    <div>
+    <div className='bg-white'>
       <div className="flex flex-col md:flex-row">
         <div className="w-full md:w-1/2 overflow-hidden relative">
           <img src={selectedImage} alt="Product Image" className="w-full h-auto md:h-screen transition-transform duration-300 transform hover:scale-110" />
@@ -94,10 +94,10 @@ const Description = () => {
       </div>
 
       {/* Cards of related products */}
-      <div className='flex justify-center items-center mb-2'>
+      <div className='flex justify-center items-center '>
       <h1 className='text-center text-2xl  scale-125 font-extrabold underline'>Related Products </h1>
       </div>
-      <div className="flex  flex-wrap justify-around mb-28 mx-2">
+      <div className="flex  flex-wrap justify-around mb-40 mx-2">
 
         {cardsData.map((card) => (
           <Card key={card.id} img={card.image} name={card.name} price={card.price} />

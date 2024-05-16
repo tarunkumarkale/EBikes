@@ -6,6 +6,8 @@ let option=["Bikes,E Bikes,Rent Bikes"]
 
 
   return (
+    <>
+    
     <div className='flex flex-col-reverse sm:flex-row   w-full  h-24 mt-32 sm:mt-0'>
 <div className='w-[100%]  sm:w-[30%]'>
 <div className="wrap-input-3">
@@ -33,6 +35,7 @@ let option=["Bikes,E Bikes,Rent Bikes"]
   </div>
 </div>
     </div>
+    </>
   )
 }
 

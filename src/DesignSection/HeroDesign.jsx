@@ -1,6 +1,7 @@
 import React from "react";
 import { model } from "../constant/Index";
 import { useNavigate } from "react-router-dom";
+import Header from "../components/Header";
 
 
 const HeroDesign = () => {
@@ -10,6 +11,7 @@ const HeroDesign = () => {
   return (
     <>
       <div className="image-container relative w-[100%]">
+      <Header></Header>
         <img src={model} alt="Your Image Alt Text" className=" h-full" />
         <div className="text-overlay absolute  top-[.01%]   pt-[9%]   sm:py-[16%]  h-full  bg-black opacity-60 blur-[30%] w-[50%] md:w-[40%] leading-normal ">
           <h2 class="text-3xl font-bold text-white leading-tight sm:text-6xl sm:leading-tight dongle-regular">
