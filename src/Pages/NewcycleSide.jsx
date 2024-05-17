@@ -20,7 +20,7 @@ const NewcycleSide= () => {
     <>
     <div className="relative max-w-xl mx-auto">
       <div className="relative h-96 overflow-hidden">
-        <img src={images[currentImage]} alt={`Carousel Image ${currentImage + 1}`} className="object-cover w-full h-full transition-opacity duration-500" />
+        <img src={images[currentImage]} alt={`Carousel Image ${currentImage + 1}`} className="object-cover w-full h-full transition-opacity duration-500 " />
         <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl font-semibold text-white md:text-2xl dark:text-gray-800">First Slide</span>
       </div>
 
