@@ -6,7 +6,7 @@ import Testing from '../DesignSection/Testing';
 const About = () => {
   return (
     <>
-    <Header></Header>
+ 
     <div className='w-full h-auto mb-5'>
       <div className='bg-white h-auto  w-full flex flex-col justify-start items-start  pl-8 pt-5 '>
       <div className='flex flex-row'>  <button class="btn-97 ">   <FaLongArrowAltLeft/> </button> <span className='text-2xl text-gray-400 mt-2 pl-2'>Back to home</span> </div>

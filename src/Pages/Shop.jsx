@@ -11,7 +11,7 @@ import Header from '../components/Header'
 const Shop = () => {
   return (
     <div className='bg-white'>
-    <Header></Header>
+    
       <ShopDesign></ShopDesign>
       <ShopDesignMidSection></ShopDesignMidSection>
       <Sidebar></Sidebar>

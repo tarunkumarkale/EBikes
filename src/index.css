@@ -384,3 +384,22 @@ padding-left: 10px;
   box-shadow: 0 6px 0 -4px #fff, 0 9px 0 -4px #aaa, 0 12px 0 -4px #000;
   transform: translateY(-5px);
 }
+
+
+/* ============================================================================================================================================================================================= */
+/* carousel */
+
+
+
+/* Custom styles for the slideshow */
+.carousel {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}

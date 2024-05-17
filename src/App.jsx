@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -8,14 +7,16 @@ import Contacts from './components/Contacts';
 import Footer from './components/Footer';
 import Description from './Pages/Description';
 import About from './components/About';
+import NewCylce from './Pages/NewCylce';
 
+import  SlideNormalBike from "./Pages/SlideNormalBike"
 
 
 const App = () => {
   return (
     <div>
       <Router basename="/EBikes">
-        {/* <Header /> */}
+        <Header /> 
         <MainCont />
         <Footer></Footer>
       </Router>
@@ -38,7 +39,12 @@ const MainCont = () => {
                 <section >
                   <Hero />
                 </section>
-            
+            <section>
+              <NewCylce></NewCylce>
+        </section>
+            <section>
+              <SlideNormalBike></SlideNormalBike>
+        </section>
                 <section >
                   <Contacts />
                 </section>
@@ -53,6 +59,3 @@ const MainCont = () => {
 };
 
 export default App;
-
-
-
