@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   BsFillArrowRightCircleFill,
   BsFillArrowLeftCircleFill,
 } from "react-icons/bs";
 
 const Carousel = ({ slides }) => {
-  let [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(0);
+  const autoSlideInterval = 5000; // 5 seconds
 
   const previousSlide = () => {
     setCurrent(current === 0 ? slides.length - 1 : current - 1);
@@ -14,6 +15,11 @@ const Carousel = ({ slides }) => {
   const nextSlide = () => {
     setCurrent(current === slides.length - 1 ? 0 : current + 1);
   };
+
+  useEffect(() => {
+    const timer = setInterval(nextSlide, autoSlideInterval);
+    return () => clearInterval(timer); // Clear interval on component unmount
+  }, [current]);
 
   return (
     <div className="overflow-hidden relative w-full h-full">
@@ -30,7 +36,7 @@ const Carousel = ({ slides }) => {
         ))}
       </div>
 
-      <div className="absolute top-0 h-full  w-full flex justify-between   items-center text-white px-2 sm:px-10 text-3xl">
+      <div className="absolute top-0 h-full w-full flex justify-between items-center text-white px-2 sm:px-10 text-3xl">
         <button onClick={previousSlide}>
           <BsFillArrowLeftCircleFill />
         </button>
