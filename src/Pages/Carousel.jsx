@@ -30,7 +30,7 @@ const Carousel = ({ slides }) => {
         ))}
       </div>
 
-      <div className="absolute top-0 h-full  w-full flex justify-between  items-center text-white px-10 text-3xl">
+      <div className="absolute top-0 h-full  w-full flex justify-between   items-center text-white px-2 sm:px-10 text-3xl">
         <button onClick={previousSlide}>
           <BsFillArrowLeftCircleFill />
         </button>

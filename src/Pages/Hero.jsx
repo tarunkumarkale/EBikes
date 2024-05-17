@@ -2,12 +2,13 @@ import React from "react";
 import Carousel from "./Carousel";
 import HeroDesign from "../DesignSection/HeroDesign";
 import ElectricVideo from "./ElectricVideo";
+import Three from "./Three";
 
 const Hero = () => {
   let slides = [
     <HeroDesign key="1" />,
     <ElectricVideo key="2" />,
-    <HeroDesign key="3" />
+    <Three key="3" />
   ];
 
   return (

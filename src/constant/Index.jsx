@@ -23,7 +23,8 @@ import model from "../assets/img/model.jpg";
 import model3 from "../assets/img/model3.jpg";
 import Contact from "../assets/img/Contact.jpg";
 import Contact2 from "../assets/img/Contact2.jpg";
+import Vi from "../assets/Vi.mp4";
 
 
 
-export { home2, home3, home4, home1, model,dolor,T_Rex,one,ipsum,saittis,odio,two,x1b,X2,consectetur,doodleNocturnalv3,Contact,Contact2,model3 };
+export { home2, home3, home4, home1, model,dolor,T_Rex,one,ipsum,saittis,odio,two,x1b,X2,consectetur,doodleNocturnalv3,Contact,Contact2,model3,Vi };
