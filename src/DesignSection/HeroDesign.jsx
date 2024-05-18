@@ -14,7 +14,7 @@ const HeroDesign = () => {
           Discover the <span className="text-red-500">Latest Arrivals!</span>
         </h2>
         <p className="mt-4 text-xl text-white leading-tight sm:text-4xl sm:leading-tight">
-          Check out our new e-bikes, bikes, and rentals!
+        Check out our latest bikes Shop
         </p>
         <div className="flex justify-center items-center mt-8">
           <button

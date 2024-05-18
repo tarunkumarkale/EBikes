@@ -1,4 +1,5 @@
 import React from 'react';
+import { green } from '../constant/Index';
 
 const Rent = () => {
   return (
@@ -8,7 +9,7 @@ const Rent = () => {
       <div className="w-full h-64 lg:w-1/2 lg:h-auto">
         <img
           className="h-full w-full object-cover"
-          src="https://picsum.photos/id/1018/2000"
+          src={green}
           alt="Winding mountain road"
         />
       </div>
@@ -20,9 +21,9 @@ const Rent = () => {
         <div className="flex flex-col p-12 md:px-16">
           <h2 className="text-xl font-medium uppercase text-green-800 lg:text-2xl">Winding Mountain Road</h2>
           <p className="mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-            ex ea commodo consequat.
+         1. Explore cycling excellence with us! 🚴‍♂️<br/>
+2.We offer a complete cycling experience: bikes, accessories, repairs. ✔️ <br />
+3.Click below to visit our About Us page and learn more! 🌟
           </p>
           {/* Button Container */}
           <div className="mt-8">
@@ -30,7 +31,7 @@ const Rent = () => {
               href="#"
               className="inline-block w-full text-center text-lg font-medium text-gray-100 bg-green-600 border-solid border-2 border-gray-600 py-4 px-10 hover:bg-green-800 hover:shadow-md md:w-48"
             >
-              Read More
+              About us
             </a>
           </div>
         </div>

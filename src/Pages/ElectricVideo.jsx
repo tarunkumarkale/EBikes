@@ -15,9 +15,12 @@ const ElectricVideo = () => {
         ></video>
       </div>
       <div className="video-content space-y-2 z-10">
-        <h1 className="font-medium text-6xl">Discover premium  <span className='text-red-600'>biking</span>   </h1>
-        <h3 className="font-normal text-3xl">with top-quality cycles.</h3>
-        <h5 className="font-normal text-3xl">Check out our new <span className='text-green-700'>e-bikes, bikes, and rentals!</span> </h5>
+        <h1 className="font-medium text-4xl animate-slidein opacity-0" style={{'--slidein-delay': '500ms'}}>Discover premium <span className='text-red-600'>biking</span></h1>
+        <h3 className="font-normal text-2xl animate-slidein opacity-0" style={{'--slidein-delay': '800ms'}}>with top-quality cycles.</h3>
+        <h5 className="font-normal text-2xl animate-slidein opacity-0" style={{'--slidein-delay': '1000ms'}}>Check out our new <span class="text-red-800 text-3xl font-semibold">e-bikes, bikes, and rentals</span>! See our gallery.</h5>
+
+        
+        <button class="btn-cybr"  style={{'--slidein-delay': '1200ms'}} > Gallery</button>
       </div>
     </section>
   );

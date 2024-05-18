@@ -1,4 +1,5 @@
 import React from 'react'
+import { IoMdBicycle } from "react-icons/io";
 
 const GreenCycle = () => {
   return (
@@ -18,11 +19,7 @@ const GreenCycle = () => {
               Plant<span className="text-green-700">.</span>
             </div>
             <div>
-              <img
-                src="https://image.flaticon.com/icons/svg/497/497348.svg"
-                alt="Icon"
-                className="w-8"
-              />
+         <IoMdBicycle className={'w-20 h-20 text-green-700'}/>
             </div>
           </nav>
           <header className="container px-4 lg:flex mt-10 items-center h-full lg:mt-0">

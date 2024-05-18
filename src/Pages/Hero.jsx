@@ -8,11 +8,11 @@ import GreenCycle from "./GreenCycle";
 
 const Hero = () => {
   let slides = [
-    <ElectricVideo key="1" />,
-    <HeroDesign key="2" />,
-    <Three key="3" />,
-    <Rent key="4" />,
-    <GreenCycle key="5" />
+    <ElectricVideo key="1" />,  // video of demo
+    <HeroDesign key="2" />, // normal bike
+    <Three key="3" />, // electric bike
+    <Rent key="4" />,  // rent bike
+    <GreenCycle key="5" />  // environment
   ];
 
   return (
