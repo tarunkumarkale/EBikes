@@ -19,11 +19,12 @@ const Rent = () => {
       <div className="max-w-lg bg-white md:max-w-2xl md:z-10 md:shadow-lg md:absolute md:top-0 md:mt-48 lg:w-3/5 lg:left-0 lg:mt-20 lg:ml-20 xl:mt-24 xl:ml-12">
         {/* Text Wrapper */}
         <div className="flex flex-col p-12 md:px-16">
-          <h2 className="text-xl font-medium uppercase text-green-800 lg:text-2xl">Winding Mountain Road</h2>
+          <h2 className="text-xl font-medium uppercase text-green-800 lg:text-2xl">Why We?</h2>
           <p className="mt-2">
          1. Explore cycling excellence with us! 🚴‍♂️<br/>
 2.We offer a complete cycling experience: bikes, accessories, repairs. ✔️ <br />
-3.Click below to visit our About Us page and learn more! 🌟
+3. Because we provide e-bikes and regular bikes for rent, we are committed to promoting both your health and the health of the environment. <br/>
+4.Click below to visit our About Us page and learn more! 🌟
           </p>
           {/* Button Container */}
           <div className="mt-8">

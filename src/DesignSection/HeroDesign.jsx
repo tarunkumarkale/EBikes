@@ -8,7 +8,7 @@ const HeroDesign = () => {
 
   return (
     <div className="relative w-full h-screen">
-      <img src={model3} alt="E-Bike Model" className="h-screen w-screen object-fill" />
+      <img src={model3} alt="E-Bike Model" className="h-screen w-screen object-cover" />
       <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center px-4 sm:px-8">
         <h2 className="text-3xl font-bold text-white leading-tight sm:text-6xl sm:leading-tight">
           Discover the <span className="text-red-500">Latest Arrivals!</span>

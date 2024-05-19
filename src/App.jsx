@@ -7,9 +7,10 @@ import Contacts from './components/Contacts';
 import Footer from './components/Footer';
 import Description from './Pages/Description';
 import About from './components/About';
-import NewCylce from './Pages/NewCylce';
+
 
 import  SlideNormalBike from "./Pages/SlideNormalBike"
+import NewCylce from './Pages/Offertext';
 
 
 const App = () => {

@@ -1,4 +1,10 @@
 import React, { useEffect } from 'react';
+import { pro_java } from '../constant/IndexOne';
+import {wilier}  from '../constant/IndexOne'
+import {BLK}  from '../constant/IndexOne'
+import {x1b}  from '../constant/IndexOne'
+import {X2}  from '../constant/IndexOne'
+import {TRex}  from '../constant/IndexOne'
 
 const SwipeCards = () => {
   useEffect(() => {
@@ -46,60 +52,50 @@ const SwipeCards = () => {
   const cards = [
     {
       id: 1,
-      image: `https://source.unsplash.com/random/300x200?${encodeURIComponent('Cocktail')}`,
-      title: 'Cocktail',
+      image: pro_java,
+      description: 'PRO JAVA 27.5 FUGA-3 M/S',
+      price: 8.99,
+      link: 'https://lqrs.com'
+    },
+    {
+      id: 1,
+      image: wilier ,
+      description: 'WILIER 700C GTR TEAM 105',
+      price: 8.99,
+      link: 'https://lqrs.com'
+    },
+    {
+      id: 1,
+      image:BLK,
+      description: 'GIANT 700C ROAM 2 DISC',
+      price: 8.99,
+      link: 'https://lqrs.com'
+    },
+    {
+      id: 1,
+      image:x1b,
+
       description: 'Tropical mix of flavors, perfect for parties.',
       price: 8.99,
       link: 'https://lqrs.com'
     },
     {
       id: 1,
-      image: `https://source.unsplash.com/random/300x200?${encodeURIComponent('Cocktail')}`,
-      title: 'Cocktail',
+      image: X2,
+   
       description: 'Tropical mix of flavors, perfect for parties.',
       price: 8.99,
       link: 'https://lqrs.com'
     },
     {
       id: 1,
-      image: `https://source.unsplash.com/random/300x200?${encodeURIComponent('Cocktail')}`,
+      image: TRex,
       title: 'Cocktail',
       description: 'Tropical mix of flavors, perfect for parties.',
       price: 8.99,
       link: 'https://lqrs.com'
-    },
-    {
-      id: 1,
-      image: `https://source.unsplash.com/random/300x200?${encodeURIComponent('Cocktail')}`,
-      title: 'Cocktail',
-      description: 'Tropical mix of flavors, perfect for parties.',
-      price: 8.99,
-      link: 'https://lqrs.com'
-    },
-    {
-      id: 1,
-      image: `https://source.unsplash.com/random/300x200?${encodeURIComponent('Cocktail')}`,
-      title: 'Cocktail',
-      description: 'Tropical mix of flavors, perfect for parties.',
-      price: 8.99,
-      link: 'https://lqrs.com'
-    },
-    {
-      id: 1,
-      image: `https://source.unsplash.com/random/300x200?${encodeURIComponent('Cocktail')}`,
-      title: 'Cocktail',
-      description: 'Tropical mix of flavors, perfect for parties.',
-      price: 8.99,
-      link: 'https://lqrs.com'
-    },
-    {
-      id: 1,
-      image: `https://source.unsplash.com/random/300x200?${encodeURIComponent('Cocktail')}`,
-      title: 'Cocktail',
-      description: 'Tropical mix of flavors, perfect for parties.',
-      price: 8.99,
-      link: 'https://lqrs.com'
-    },
+    }
+   
     // Add other card objects here
   ];
 
@@ -112,7 +108,7 @@ const SwipeCards = () => {
               <img src={card.image} alt="" className="w-full h-40 object-cover" />
               <div className="p-4">
                 <h3 className="text-lg leading-6 font-bold text-gray-900">{card.title}</h3>
-                <p className="text-gray-600 mt-2 text-sm">{card.description}</p>
+                <p className="text-gray-600 mt-2 text-lg">{card.description}</p>
                 <div className="flex justify-between items-center mt-4">
                   <span className="text-2xl font-extrabold text-gray-900">${card.price.toFixed(2)}</span>
                   <a href={card.link} className="text-white bg-fuchsia-950 hover:bg-fuchsia-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
