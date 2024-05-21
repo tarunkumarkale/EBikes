@@ -496,3 +496,17 @@ transparent;
     transform: translate(0);
   }
 }
+
+/* horizontal scroll bar */
+/* Add this CSS to hide the scrollbar */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+
+/* */

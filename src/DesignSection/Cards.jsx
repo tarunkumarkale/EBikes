@@ -10,7 +10,7 @@ const Cards = ({ isButtonClicked}) => {
 
 
   return (
-  <div className='w-full flex justify-around gap-14  sm:gap-32 flex-wrap '>
+  <div className='w-full flex justify-around gap-14  sm:gap-32 flex-wrap bg-white'>
       
 <div className="w-[28%] sm:w-[21%]   h-auto bg-white shadow-lg rounded-lg overflow-hidden ">
   <div className="relative group">

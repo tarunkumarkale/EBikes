@@ -1,7 +1,7 @@
 import React from 'react'
 import { IoMdBicycle } from "react-icons/io";
 
-const GreenCycle = () => {
+ const GreenCycle = () => {
   return (
     <div>
          <div className="flex flex-wrap">
@@ -31,7 +31,7 @@ const GreenCycle = () => {
               <p className="text-lg lg:text-xl mb-6">
                 High-performance cycles for rent, perfect for any journey. Eco-friendly and fun! Renting cycles reduces carbon emissions and promotes cleaner air.
               </p>
-              <button className="bg-green-500 text-white text-xl lg:text-2xl font-medium px-4 py-2 rounded shadow">
+              <button className="bg-green-500 text-white text-xl lg:text-2xl font-medium px-4 py-2 rounded shadow" >
                 Learn More
               </button>
             </div>

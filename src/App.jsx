@@ -11,6 +11,11 @@ import About from './components/About';
 
 import  SlideNormalBike from "./Pages/SlideNormalBike"
 import NewCylce from './Pages/Offertext';
+import Gallery from './components/Gallery';
+import Varient from './Pages/Varient';
+
+
+
 
 
 const App = () => {
@@ -33,6 +38,7 @@ const MainCont = () => {
           <Route path="/Shop" element={<Shop />} />
           <Route path="/Description" element={<Description />} />
           <Route path="/About" element={<About/>} />
+          <Route path="/Gallery" element={<Gallery/>} />
           <Route
             path="/"
             element={
@@ -46,6 +52,10 @@ const MainCont = () => {
             <section>
               <SlideNormalBike></SlideNormalBike>
         </section>
+        <section>
+        <Varient></Varient>
+        </section>
+     
                 <section >
                   <Contacts />
                 </section>
