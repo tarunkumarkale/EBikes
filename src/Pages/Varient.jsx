@@ -34,8 +34,8 @@ const Varient = () => {
 
   return (
 
-    <>
-    <div className='flex justify-center items-center mt-11'><h1 className='text-6xl font-bold'>Ou<span className='text-gray-600'>r</span> Varie<span className='text-green-400'>n</span><span className='text-red-600'>t</span>s</h1></div>
+    <div className='bg-slate-100 '>
+    <div className='flex justify-center items-center mt-11 '><h1 className='text-6xl font-bold'>Ou<span className='text-gray-600'>r</span> Varie<span className='text-green-400'>n</span><span className='text-red-600'>t</span>s</h1></div>
     <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
@@ -50,7 +50,7 @@ const Varient = () => {
 
 
     </div>
-    </>
+    </div>
   );
 };
 
