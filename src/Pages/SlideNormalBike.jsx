@@ -101,8 +101,8 @@ const SwipeCards = () => {
 
   return (
     <>
-    <div className='flex justify-center items-center mb-3'>
-      <h1 className='text-2xl  text-red-500 underline animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5   font-bold'> New Products Arrived  </h1>
+    <div className='flex justify-center items-center mb-8 mt-4'>
+      <h1 className='  text-black  animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-4xl  font-bold'> New Products  Arrive<span className='text-red-600'>d</span>  </h1>
     </div>
     <div className="relative mb-4 px-0.5">
      
