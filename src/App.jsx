@@ -13,6 +13,8 @@ import  SlideNormalBike from "./Pages/SlideNormalBike"
 import NewCylce from './Pages/Offertext';
 import Gallery from './components/Gallery';
 import Varient from './Pages/Varient';
+import Blog from './Pages/blog';
+
 
 
 
@@ -54,6 +56,9 @@ const MainCont = () => {
         </section>
         <section>
         <Varient></Varient>
+        </section>
+        <section>
+       <Blog/>
         </section>
      
                 <section >
