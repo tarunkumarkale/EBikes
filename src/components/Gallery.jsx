@@ -26,7 +26,7 @@ const Gallery = () => {
 
   return (
     <div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4  mb-12 mt-8">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-10 mt-10">
         {images.map((image, index) => (
           <div key={index} className="cursor-pointer" onClick={() => openImage(index)}>
             <img
@@ -43,7 +43,7 @@ const Gallery = () => {
           <button className="absolute top-4 right-4 text-white text-3xl" onClick={closeImage}>&times;</button>
           <div className="relative flex justify-center items-center">
             <button
-              className="absolute left-0 text-black text-3xl transform -translate-y-1/2 p-4 bg-white rounded-full"
+              className="absolute left-0 transform -translate-x-full -translate-y-1/2 p-4 bg-white rounded-full"
               onClick={prevImage}
               style={{ top: '50%' }}
             >
@@ -51,7 +51,7 @@ const Gallery = () => {
             </button>
             <img src={images[currentImage]} alt={`Gallery ${currentImage}`} className="max-h-screen" />
             <button
-              className="absolute right-0 text-black text-3xl transform -translate-y-1/2 p-4 bg-white rounded-full"
+              className="absolute right-0 transform translate-x-full -translate-y-1/2 p-4 bg-white rounded-full"
               onClick={nextImage}
               style={{ top: '50%' }}
             >
