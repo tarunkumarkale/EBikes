@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { pro_java, wilier, BLK, x1b, X2, TRex } from '../constant/IndexOne'; // Update the imports as necessary
-import { FaArrowRight } from "react-icons/fa";
-import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
+import { ek, ten, tinn, dou, five, four, seven, six, eight, eleven, nine } from '../constant/IndexGallery';
 
 const Gallery = () => {
-  const images = [pro_java, wilier, BLK, x1b, X2, TRex];
+  const images = [ek, ten, tinn, dou, five, four, seven, six, eight, eleven, nine];
   const [isOpen, setIsOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -27,15 +26,13 @@ const Gallery = () => {
 
   return (
     <div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4  mb-12 mt-8">
         {images.map((image, index) => (
           <div key={index} className="cursor-pointer" onClick={() => openImage(index)}>
             <img
               src={image}
               alt={`Gallery ${index}`}
-              className={`w-full h-auto object-cover rounded ${
-                index % 3 === 0 ? 'rounded-full' : index % 3 === 1 ? 'rounded-lg' : 'rounded-xl'
-              }`}
+              className="w-full h-48 object-cover"
             />
           </div>
         ))}
@@ -46,7 +43,7 @@ const Gallery = () => {
           <button className="absolute top-4 right-4 text-white text-3xl" onClick={closeImage}>&times;</button>
           <div className="relative flex justify-center items-center">
             <button
-              className="absolute left-0 text-black text-3xl transform -translate-y-1/2 p-4"
+              className="absolute left-0 text-black text-3xl transform -translate-y-1/2 p-4 bg-white rounded-full"
               onClick={prevImage}
               style={{ top: '50%' }}
             >
@@ -54,7 +51,7 @@ const Gallery = () => {
             </button>
             <img src={images[currentImage]} alt={`Gallery ${currentImage}`} className="max-h-screen" />
             <button
-              className="absolute right-0 text-black text-3xl transform -translate-y-1/2 p-4"
+              className="absolute right-0 text-black text-3xl transform -translate-y-1/2 p-4 bg-white rounded-full"
               onClick={nextImage}
               style={{ top: '50%' }}
             >
