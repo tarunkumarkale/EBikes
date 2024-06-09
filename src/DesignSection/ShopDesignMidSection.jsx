@@ -14,8 +14,10 @@ const ShopDesignMidSection = () => {
     <Sidebar/>
         <Cards/>
       </div>
+      <div className="mb-6">   <Pagination/></div>
+    
    
-      <Pagination />
+    
     </>
   );
 };
