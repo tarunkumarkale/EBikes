@@ -1,6 +1,19 @@
-import React from 'react';
+
+
+
+import React, { useEffect } from 'react';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 const Blog = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  }, []);
+
   const articles = [
     {
       id: 1,
@@ -29,11 +42,11 @@ const Blog = () => {
   return (
     <section className="bg-white ">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <div className="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
+        <div className="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8" data-aos="fade-down">
           <h2 className="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-green-500">
             Our Blo<span className='text-red-700'>g</span>
           </h2>
-          <p className=" text-gray-500 sm:text-2xl font-medium dark:text-gray-600">
+          <p className="text-gray-500 sm:text-2xl font-medium dark:text-gray-600">
             We use an agile approach to test assumptions and connect with the needs of your audience early and often.
           </p>
         </div>
@@ -42,6 +55,7 @@ const Blog = () => {
             <article
               key={article.id}
               className="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+              data-aos="fade-up"
             >
               <div className="flex justify-between items-center mb-5 text-gray-500">
                 <span className="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">

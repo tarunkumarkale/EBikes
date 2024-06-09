@@ -1,11 +1,23 @@
-import React, { useState } from 'react';
+
+
+import React, { useState, useEffect } from 'react';
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import { ek, ten, tinn, dou, five, four, seven, six, eight, eleven, nine } from '../constant/IndexGallery';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 const Gallery = () => {
   const images = [ek, ten, tinn, dou, five, four, seven, six, eight, eleven, nine];
   const [isOpen, setIsOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  }, []);
 
   const openImage = (index) => {
     setCurrentImage(index);
@@ -28,7 +40,7 @@ const Gallery = () => {
     <div>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-10 mt-10">
         {images.map((image, index) => (
-          <div key={index} className="cursor-pointer" onClick={() => openImage(index)}>
+          <div key={index} className="cursor-pointer" onClick={() => openImage(index)} data-aos="fade-up">
             <img
               src={image}
               alt={`Gallery ${index}`}
@@ -39,7 +51,7 @@ const Gallery = () => {
       </div>
 
       {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50" data-aos="zoom-in">
           <button className="absolute top-4 right-4 text-white text-3xl" onClick={closeImage}>&times;</button>
           <div className="relative flex justify-center items-center">
             <button

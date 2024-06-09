@@ -25,7 +25,7 @@ const BikeGallery = () => {
 
 
 
-// electic
+
 <div className="flex flex-col md:flex-row-reverse min-h-screen p-5">
       <div className="md:w-2/5 flex flex-col items-center p-5">
         <img id="mainImage" src={mainImage} alt="Main Bike" className="w-full h-auto" />
@@ -43,7 +43,7 @@ const BikeGallery = () => {
     </div>
 
 
-/// rent bike
+
 
 <div className="flex flex-col md:flex-row min-h-screen p-5">
       <div className="md:w-2/5 flex flex-col items-center p-5">
