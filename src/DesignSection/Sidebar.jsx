@@ -23,13 +23,13 @@ const Sidebar = () => {
           </ul>
         </div>
         {/* Close button */}
-        <button className="absolute top-4 right-4" onClick={toggleSidebar}>
-          <IoClose className="h-6 w-6 text-gray-600" />
+        <button className="absolute top-4 right-4" >
+          <IoClose className="h-6 w-6 text-gray-600" onClick={toggleSidebar}  />
         </button>
       </div>
-
+{/* */}
       {/* Button to toggle sidebar */}
-      <button className="fixed top-4 right-1  mt-14 bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full" onClick={toggleSidebar}>
+      <button className="fixed top-4 right-1  mt-14 bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full"  onClick={toggleSidebar} >
         {isSidebarOpen ? 'X ' : "Filter Product"}
       </button>
     </div>
