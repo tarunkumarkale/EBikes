@@ -1,10 +1,18 @@
 import React from 'react'
-
+import {footer} from '../constant/Index'
 const Footer = () => {
   return (
-    <div className='bg-black'>
-<footer class="text-white  bg-black -mt-8">
+    <div className='bg-black mt-7'>
+  <footer
+        className="text-white bg-black -mt-8"
+        style={{
+          backgroundImage: `url(${footer})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Bike</span>

@@ -1,28 +1,11 @@
-import React from 'react'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import ImagesElectric from '../constant/Indexelectric'
-
+import React from 'react';
+import ImagesElectric from '../constant/Indexelectric';
 
 const Cardforelectric = () => {
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-    });
-  }, []);
-
-
-
-
   return (
-    <div>
-      {
-        <div className='w-full flex justify-around gap-14 sm:gap-32 flex-wrap bg-white'>
+    <div className='w-full flex justify-around gap-14 sm:gap-32 flex-wrap bg-white'>
       {ImagesElectric.map((card) => (
-        <div key={card.id} className="w-[28%] sm:w-[21%] h-auto bg-white   shadow-2xl rounded-lg overflow-hidden" data-aos={card.animation}>
+        <div key={card.id} className="w-[28%] sm:w-[21%] h-auto bg-white shadow-2xl rounded-lg overflow-hidden">
           <div className="relative group">
             <img className="w-full h-auto" src={card.image} alt={card.description} />
             <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity"></div>
@@ -44,9 +27,7 @@ const Cardforelectric = () => {
         </div>
       ))}
     </div>
-      }
-    </div>
-  )
-}
+  );
+};
 
-export default Cardforelectric
+export default Cardforelectric;

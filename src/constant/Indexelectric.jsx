@@ -47,7 +47,21 @@ const ImagesElectric = [
     description: 'X2-red',
     type: 'electric',
     price: '899.99'
-  }
+  },
+  {
+    id: 7,
+    image: X2,
+    description: 'X2-red',
+    type: 'electric',
+    price: '899.99'
+  },
+  {
+    id: 8,
+    image: X2,
+    description: 'X2-red',
+    type: 'electric',
+    price: '899.99'
+  },
 ];
 
 export default ImagesElectric;

@@ -1,6 +1,22 @@
-import React from 'react';
 
-const DropDown = ({ user, togg }) => {
+import React, { useState } from "react";
+import CardForRegular from "./CardForRegular";
+import Cardforelectric from "./Cardforelectric";
+import CardforRent from "./CardforRent";
+
+const DropDown = ({ user, togg, handleSelectOption }) => {
+  const [Msgg, setMsgg] = useState(null);
+
+  const Renmagic = (data) => {
+    let component = null;
+    if (data === 'Reg') component = <CardForRegular />;
+    if (data === 'Rent') component = <CardforRent />;
+    if (data === 'Ebike') component = <Cardforelectric />;
+    
+    setMsgg(component);
+    handleSelectOption(component);
+  };
+
   return (
     <div>
       <button
@@ -41,6 +57,7 @@ const DropDown = ({ user, togg }) => {
               <a
                 href="#"
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                onClick={() => Renmagic("Ebike")}
               >
                 E-Bicycle
               </a>
@@ -49,6 +66,7 @@ const DropDown = ({ user, togg }) => {
               <a
                 href="#"
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                onClick={() => Renmagic("Reg")}
               >
                 Bicycle
               </a>
@@ -57,6 +75,7 @@ const DropDown = ({ user, togg }) => {
               <a
                 href="#"
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                onClick={() => Renmagic("Rent")}
               >
                 Rent Bicycle
               </a>
