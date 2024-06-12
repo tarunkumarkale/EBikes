@@ -5,62 +5,87 @@ import x11 from '../assets/Imgshopele/x1+legend+card+w.jpg';
 import x1b from '../assets/Imgshopele/x1b.jpg';
 import X2 from '../assets/Imgshopele/X2-red.jpg';
 
+
+
+const getRandomStockStatus = () => Math.random() < 0.5;
+const getRandomAnimation = () => {
+  const animations = ['fade-up', 'fade-down', 'fade-left', 'fade-right', 'zoom-in', 'zoom-out'];
+  return animations[Math.floor(Math.random() * animations.length)];
+};
+
+
 const ImagesElectric = [
   {
     id: 1,
     image: cartBot,
     description: 'cartBot',
     type: 'electric',
-    price: '999.99'
+    price: '999.99',
+    inStock: getRandomStockStatus(),
+    animation: getRandomAnimation(),
   },
   {
     id: 2,
     image: TRex,
     description: 'TRex',
     type: 'electric',
-    price: '899.99'
+    price: '899.99',
+    inStock: getRandomStockStatus(),
+    animation: getRandomAnimation(),
   },
   {
     id: 3,
     image: x1,
     description: 'x1+cherry+red',
     type: 'electric',
-    price: '799.99'
+    price: '799.99',
+    inStock: getRandomStockStatus(),
+    animation: getRandomAnimation(),
   },
   {
     id: 4,
     image: x11,
     description: 'x1+legend+card+w',
     type: 'electric',
-    price: '849.99'
+    price: '849.99',
+    inStock: getRandomStockStatus(),
+    animation: getRandomAnimation(),
   },
   {
     id: 5,
     image: x1b,
     description: 'x1b',
     type: 'electric',
-    price: '759.99'
+    price: '759.99',
+    inStock: getRandomStockStatus(),
+    animation: getRandomAnimation(),
   },
   {
     id: 6,
     image: X2,
     description: 'X2-red',
     type: 'electric',
-    price: '899.99'
+    price: '899.99',
+    inStock: getRandomStockStatus(),
+    animation: getRandomAnimation(),
   },
   {
     id: 7,
     image: X2,
     description: 'X2-red',
     type: 'electric',
-    price: '899.99'
+    price: '899.99',
+    inStock: getRandomStockStatus(),
+    animation: getRandomAnimation(),
   },
   {
     id: 8,
     image: X2,
     description: 'X2-red',
     type: 'electric',
-    price: '899.99'
+    price: '899.99',
+    inStock: getRandomStockStatus(),
+    animation: getRandomAnimation(),
   },
 ];
 

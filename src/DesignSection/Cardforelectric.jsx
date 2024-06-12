@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import ImagesElectric from '../constant/Indexelectric';
 
 const Cardforelectric = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  }, []);
+
   return (
     <div className='w-full flex justify-around gap-14 sm:gap-32 flex-wrap bg-white'>
       {ImagesElectric.map((card) => (
-        <div key={card.id} className="w-[28%] sm:w-[21%] h-auto bg-white shadow-2xl rounded-lg overflow-hidden">
+        <div key={card.id} className="w-[28%] sm:w-[21%] h-auto bg-white shadow-2xl rounded-lg overflow-hidden" data-aos="fade-up">
           <div className="relative group">
             <img className="w-full h-auto" src={card.image} alt={card.description} />
             <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity"></div>
