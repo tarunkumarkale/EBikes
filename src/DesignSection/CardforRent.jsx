@@ -1,9 +1,10 @@
 import React from 'react'
+import PopUpRentBike from './PopUpRentBike'
 
 const CardforRent = () => {
   return (
     <div>
-card for reant      
+<PopUpRentBike/>
     </div>
   )
 }
