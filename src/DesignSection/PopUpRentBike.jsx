@@ -9,7 +9,7 @@ const PopUpRentBike = () => {
   return (
     <>
       <Button onClick={() => setOpenModal(true)}>Toggle modal</Button>
-      <Modal show={openModal} onClose={() => setOpenModal(false)}>
+      <Modal show={openModal} onClose={() => setOpenModal(false)} className="flex items-center justify-center">
         <Modal.Header>HOW IT WORKS</Modal.Header>
         <h1 className="text-2xl text-white px-12">Follow these 3 steps</h1>
         <Modal.Body>
@@ -32,7 +32,6 @@ const PopUpRentBike = () => {
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={() => setOpenModal(false)}>I accept</Button>
-     
         </Modal.Footer>
       </Modal>
     </>
