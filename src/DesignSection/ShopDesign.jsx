@@ -1,14 +1,16 @@
 
 import React, { useState } from 'react';
 import DropDown from './DropDown';
+import CardForRegular from './CardForRegular';
+
 
 const ShopHeader = () => {
   const [user, setUser] = useState(false);
-  const [testing, setTesting] = useState(null);
+  const [testing, setTesting] = useState(<CardForRegular/>);
 
   const EmptyFun = (Msgg) => {
     setTesting(Msgg);
-    console.log(Msgg);
+
   };
 
   const userClick = () => {
