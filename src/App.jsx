@@ -14,6 +14,9 @@ import NewCylce from './Pages/Offertext';
 import Gallery from './components/Gallery';
 import Varient from './Pages/Varient';
 import Blog from './Pages/blog';
+import Services from './components/Services';
+// import Services from './components/Services';
+
 
 
 
@@ -41,6 +44,7 @@ const MainCont = () => {
           <Route path="/Description" element={<Description />} />
           <Route path="/About" element={<About/>} />
           <Route path="/Gallery" element={<Gallery/>} />
+          <Route path="/Services" element={<Services/>}/> 
           <Route
             path="/"
             element={

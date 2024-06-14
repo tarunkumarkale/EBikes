@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaLongArrowAltLeft } from "react-icons/fa";
-import Header from './Header';
 import Testing from '../DesignSection/Testing';
 import { useNavigate } from 'react-router-dom';
 

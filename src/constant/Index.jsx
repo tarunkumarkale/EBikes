@@ -27,7 +27,7 @@ import Vi from "../assets/Vi.mp4";
 import Ebike from "../assets/EBikes.jpg";
 import green from "../assets/green.jpg";
 import footer from "../assets/footer.png";
+import BLk from "../assets/imgShopR/BLK.webp"
 
 
-
-export { home2, home3, home4, home1, model,dolor,T_Rex,one,ipsum,saittis,odio,two,x1b,X2,consectetur,doodleNocturnalv3,Contact,Contact2,model3,Vi,Ebike,green,footer };
+export { home2, home3, home4, home1, model,dolor,T_Rex,one,ipsum,saittis,odio,two,x1b,X2,consectetur,doodleNocturnalv3,Contact,Contact2,model3,Vi,Ebike,green,footer};

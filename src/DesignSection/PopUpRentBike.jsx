@@ -17,7 +17,7 @@ const PopUpRentBike = ({ onClose }) => {
           <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
           <div className="bg-white rounded-lg shadow-lg p-6 z-10 max-w-md mx-auto">
             <div className="text-center text-2xl font-bold mb-4">HOW IT WORKS</div>
-            <h1 className="text-xl text-black px-12 mb-4">Follow these 3 steps</h1>
+            <h1 className="text-xl text-black px-12 mb-4 text-center">Follow these 3 steps</h1>
             <div className="flex items-center justify-around space-x-4 mb-6">
               <div className="text-center bg-gray-100 p-4 rounded-lg shadow-md flex-1">
                 <FaBicycle className="text-4xl mx-auto mb-2" />

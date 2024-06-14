@@ -7,6 +7,7 @@ import x1b from '../assets/Imgshopele/x1b.jpg';
 import STRIDE from "../assets/img2/Stride_29.webp";
 import pro_java from "../assets/img2/pro_java_1.webp";
 
+
 const getRandomStockStatus = () => Math.random() < 0.5;
 const getRandomAnimation = () => {
   const animations = ['fade-up', 'fade-down', 'fade-left', 'fade-right', 'zoom-in', 'zoom-out'];
@@ -14,17 +15,9 @@ const getRandomAnimation = () => {
 };
 
 const IndexForRent = [
+   
     {
         id: 1,
-        image: pro_java,
-        description: 'pro_java_1',
-        price: 8.99,
-        inStock: getRandomStockStatus(),
-        animation: getRandomAnimation(),
-        type: 'normal'
-    },
-    {
-        id: 2,
         image: BLK,
         description: 'BLK',
         price: 7.99,
@@ -32,8 +25,9 @@ const IndexForRent = [
         animation: getRandomAnimation(),
         type: 'normal'
     },
+
     {
-        id: 3,
+        id: 2,
         image: consectetur,
         description: 'consectetur',
         price: 6.99,
@@ -41,17 +35,19 @@ const IndexForRent = [
         animation: getRandomAnimation(),
         type: 'normal'
     },
-    {
-        id: 4,
-        image: x1,
-        description: 'x1+cherry+red', // Assuming the description matches the image file name
-        price: 5.99,
+   
+  {
+        id: 3,
+        image: pro_java,
+        description: 'pro_java_1',
+        price: 8.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
         type: 'normal'
     },
+       
     {
-        id: 5,
+        id:4 ,
         image: x11,
         description: 'x1+legend+card+w', // Assuming the description matches the image file name
         price: 4.99,
@@ -60,10 +56,19 @@ const IndexForRent = [
         type: 'normal'
     },
     {
-        id: 6,
+        id: 5,
         image: x1b,
         description: 'x1b', // Assuming the description matches the image file name
         price: 3.99,
+        inStock: getRandomStockStatus(),
+        animation: getRandomAnimation(),
+        type: 'normal'
+    },
+    , {
+        id: 6,
+        image: x1,
+        description: 'x1+cherry+red', // Assuming the description matches the image file name
+        price: 5.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
         type: 'normal'
