@@ -15,7 +15,9 @@ import Gallery from './components/Gallery';
 import Varient from './Pages/Varient';
 import Blog from './Pages/blog';
 import Services from './components/Services';
+import RentForm from './DesignSection/Rentform';
 // import Services from './components/Services';
+
 
 
 
@@ -45,6 +47,8 @@ const MainCont = () => {
           <Route path="/About" element={<About/>} />
           <Route path="/Gallery" element={<Gallery/>} />
           <Route path="/Services" element={<Services/>}/> 
+          {/* <Route path="/RentForm" element={<RentForm/>}/>  */}
+          <Route path="/RentForm/:cardId" element={<RentForm />} />
           <Route
             path="/"
             element={

@@ -9,7 +9,7 @@ function Services() {
 
   return (
     <div className='flex justify-center items-center flex-col mb-16' data-aos="zoom-in">
-      <h1 className='text-5xl mb-3'>About our services</h1>
+      <h1 className='text-5xl mb-3'> <span className='text-red-800'>A</span>bout <span className='text-green-800'>O</span>ur <span className='text-yellow-500'>S</span>ervices</h1>
       <div className='flex flex-wrap gap-4 justify-center'>
         <ServiceCard title="E-Bike Rentals" description="Rent our electric bikes for an eco-friendly and efficient way to explore the city." delay={0} />
         <ServiceCard title="Bike Rentals" description="Experience the freedom of exploring on two wheels with our traditional bike rentals." delay={100} />
