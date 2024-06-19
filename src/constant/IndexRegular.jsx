@@ -39,7 +39,7 @@ const ForNormalBicycle = [
         price: 6.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'normal'
+        type: 'Racing Bike'
     },
     {
         id: 4,
@@ -48,7 +48,7 @@ const ForNormalBicycle = [
         price: 5.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'normal'
+        type: 'Mountain Bike'
     },
     {
         id: 5,
@@ -75,7 +75,7 @@ const ForNormalBicycle = [
         price: 2.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'normal'
+        type: 'Mountain Bike'
     },
     {
         id: 8,

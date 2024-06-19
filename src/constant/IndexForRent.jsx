@@ -19,77 +19,77 @@ const IndexForRent = [
     {
         id: 1,
         image: BLK,
-        description: 'BLK',
+        description: 'Name : BLK',
         price: 7.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'normal'
+        type: 'Type : normal'
     },
 
     {
         id: 2,
         image: consectetur,
-        description: 'consectetur',
+        description: 'Name : consectetur',
         price: 6.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'normal'
+       type: 'Type : Racing Bike'
     },
    
   {
         id: 3,
         image: pro_java,
-        description: 'pro_java_1',
+        description: 'Name : pro_java_1',
         price: 8.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'normal'
+        type: 'Type : normal'
     },
        
     {
         id:4 ,
         image: x11,
-        description: 'x1+legend+card+w', // Assuming the description matches the image file name
+        description: 'Name : x1+legend+card+w', // Assuming the description matches the image file name
         price: 4.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'normal'
+        type: 'Type : electric',
     },
     {
         id: 5,
         image: x1b,
-        description: 'x1b', // Assuming the description matches the image file name
+        description: 'Name : x1b', // Assuming the description matches the image file name
         price: 3.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'normal'
+        type: 'Type : electric',
     },
     , {
         id: 6,
         image: x1,
-        description: 'x1+cherry+red', // Assuming the description matches the image file name
+        description: 'Name : x1+cherry+red', // Assuming the description matches the image file name
         price: 5.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'normal'
+        type: 'Type : electric',
     },
     {
         id: 7,
         image: STRIDE,
-        description: 'STRIDE',
+        description: 'Name : STRIDE',
         price: 2.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'normal'
+        type: 'Type : Mountain Bike'
     },
     {
         id: 8,
         image: Hailland,
-        description: 'Hailland',
+        description: 'Name : Hailland',
         price: 2.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'normal'
+        type: 'Type : normal'
     }
 ];
 

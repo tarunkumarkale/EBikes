@@ -16,17 +16,13 @@ import Varient from './Pages/Varient';
 import Blog from './Pages/blog';
 import Services from './components/Services';
 import RentForm from './DesignSection/Rentform';
-// import Services from './components/Services';
-
-
-
-
-
+import { AllDataProvider } from './context/MyContext';
 
 
 
 const App = () => {
   return (
+    <AllDataProvider>
     <div>
       <Router basename="/EBikes">
         <Header /> 
@@ -34,6 +30,7 @@ const App = () => {
         <Footer></Footer>
       </Router>
     </div>
+    </AllDataProvider>
   );
 };
 
@@ -48,7 +45,9 @@ const MainCont = () => {
           <Route path="/Gallery" element={<Gallery/>} />
           <Route path="/Services" element={<Services/>}/> 
           {/* <Route path="/RentForm" element={<RentForm/>}/>  */}
+          {/* <Route path="/RentForm/:cardId" element={<RentForm />} /> */}
           <Route path="/RentForm/:cardId" element={<RentForm />} />
+
           <Route
             path="/"
             element={
