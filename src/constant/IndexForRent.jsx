@@ -20,6 +20,7 @@ const IndexForRent = [
         id: 1,
         image: BLK,
         description: 'Name : BLK',
+        NAME: ' BLK',
         price: 7.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
@@ -30,6 +31,7 @@ const IndexForRent = [
         id: 2,
         image: consectetur,
         description: 'Name : consectetur',
+        NAME: ' consectetur',
         price: 6.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
@@ -40,6 +42,7 @@ const IndexForRent = [
         id: 3,
         image: pro_java,
         description: 'Name : pro_java_1',
+        NAME:'pro_java_1',
         price: 8.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
@@ -49,7 +52,8 @@ const IndexForRent = [
     {
         id:4 ,
         image: x11,
-        description: 'Name : x1+legend+card+w', // Assuming the description matches the image file name
+        description: 'Name : x1+legend+card+w', 
+        NAME:'x1+legend',
         price: 4.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
@@ -58,7 +62,8 @@ const IndexForRent = [
     {
         id: 5,
         image: x1b,
-        description: 'Name : x1b', // Assuming the description matches the image file name
+        description: 'Name : x1b', 
+        NAME:'x1b',
         price: 3.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
@@ -67,7 +72,8 @@ const IndexForRent = [
     , {
         id: 6,
         image: x1,
-        description: 'Name : x1+cherry+red', // Assuming the description matches the image file name
+        description: 'Name : x1+cherry+red', 
+        NAME:'x1+cherry+red',
         price: 5.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
@@ -77,6 +83,7 @@ const IndexForRent = [
         id: 7,
         image: STRIDE,
         description: 'Name : STRIDE',
+        NAME : STRIDE,
         price: 2.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
@@ -86,6 +93,7 @@ const IndexForRent = [
         id: 8,
         image: Hailland,
         description: 'Name : Hailland',
+        NAME : Hailland,
         price: 2.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),

@@ -37,6 +37,7 @@ const App = () => {
 const MainCont = () => {
   return (
     <>
+
       <main className="relative">
         <Routes>
           <Route path="/Shop" element={<Shop />} />
@@ -46,7 +47,8 @@ const MainCont = () => {
           <Route path="/Services" element={<Services/>}/> 
           {/* <Route path="/RentForm" element={<RentForm/>}/>  */}
           {/* <Route path="/RentForm/:cardId" element={<RentForm />} /> */}
-          <Route path="/RentForm/:cardId" element={<RentForm />} />
+          <Route path="/RentForm/:card" element={<RentForm />} />
+         
 
           <Route
             path="/"

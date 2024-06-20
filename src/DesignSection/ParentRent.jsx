@@ -1,11 +1,12 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import IndexForRent from "../constant/IndexForRent";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { AllDataContext } from '../context/MyContext';
 import { useNavigate } from 'react-router-dom';
 
-const ParentRent = () => {
+
+const ParentRent = ({ scrollToTop }) => {
   const { setRentData } = useContext(AllDataContext);
   const navigate = useNavigate();
 
@@ -18,9 +19,15 @@ const ParentRent = () => {
   }, []);
 
   const handleRentNow = (card) => {
-    setRentData({ description: card.description, type: card.type });
-    navigate(`/RentForm/${card.id}`);
+    setRentData({ description: card.NAME, image: card.image, type: card.type, price: card.price });
+    
+    navigate(`/Description`);
+    if (scrollToTop) {
+      scrollToTop();  // Call scrollToTop after navigation
+    }
   };
+  console.log(scrollToTop?true:false)
+  
 
   return (
     <div className="relative w-full flex justify-around gap-14 sm:gap-32 flex-wrap bg-white mb-4">
@@ -38,17 +45,18 @@ const ParentRent = () => {
                 <div className="px-6 py-4 text-gray-400 flex gap-8">
                   <button
                     className="font-bold px-4 py-2 text-sm bg-white hover:bg-gray-300 hover:text-gray-500 transition duration-300 ease-in-out"
-                    onClick={() => handleRentNow(card)}
+                    // onClick={() => handleRentNow(card)}
+                    onClick={() => {
+                      handleRentNow(card);
+                    }}
                   >
                     Rent Now
                   </button>
-                  <button className="font-bold px-4 py-2 text-sm text-white bg-green-600 hover:bg-black transition duration-300 ease-in-out">
-                    more info
-                  </button>
+          
                 </div>
               </div>
               <div className='flex flex-col justify-center items-center h-16'>
-                <h1 className='text-black font-serif uppercase'>{card.description}</h1>
+                <h1 className='text-black font-serif uppercase'>{card.NAME}</h1>
                 <h1 className='text-gray-400 font-serif'>Rs:{card.price}</h1>
               </div>
             </div>
