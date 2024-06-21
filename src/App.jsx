@@ -47,7 +47,7 @@ const MainCont = () => {
           <Route path="/Services" element={<Services/>}/> 
           {/* <Route path="/RentForm" element={<RentForm/>}/>  */}
           {/* <Route path="/RentForm/:cardId" element={<RentForm />} /> */}
-          <Route path="/RentForm/:card" element={<RentForm />} />
+          <Route path="/RentForm" element={<RentForm />} />
          
 
           <Route

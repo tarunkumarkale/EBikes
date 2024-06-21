@@ -4,15 +4,16 @@ import AOS from "aos";
 import { AllDataContext } from "../context/MyContext";
 
 const RentForm = () => {
-  const { RentFormData } = useContext(AllDataContext);
+  const { RentFormDataNAME,RentFormDatatype } = useContext(AllDataContext);
+
+  console.log(RentFormDataNAME,RentFormDatatype)
+
 
   useEffect(() => {
     AOS.init();
   }, []);
 
-  if (!RentFormData) {
-    return <div>Loading...</div>; // Handle case when RentFormData is null
-  }
+
 
   return (
     <div className="bg-yellow-200 min-h-screen flex justify-center items-center">
@@ -92,7 +93,7 @@ const RentForm = () => {
                 type="text"
                 id="bikeType"
                 name="bikeType"
-                defaultValue={`${RentFormData.description} and ${RentFormData.type}`}
+                defaultValue={`${RentFormDataNAME} and ${RentFormDatatype}`}
                 readOnly
                 className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md bg-yellow-100 text-red-700 uppercase"
                 style={{ height: "2.5rem", width: "90%" }}
