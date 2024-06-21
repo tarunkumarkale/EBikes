@@ -30,12 +30,12 @@ const ParentRent = ({ scrollToTop }) => {
   
 
   return (
-    <div className="relative w-full flex justify-around gap-14 sm:gap-32 flex-wrap bg-white mb-4">
-      <div className="w-full flex justify-around gap-14 sm:gap-32 flex-wrap">
+    <div className="relative w-full flex justify-around gap-8 sm:gap-32 flex-wrap bg-white mb-4">
+      <div className="w-full flex justify-around gap-4 sm:gap-20 flex-wrap">
         {IndexForRent.map((card) => (
           <div
             key={card.id}
-            className="w-[28%] sm:w-[21%] h-auto bg-white shadow-2xl rounded-lg overflow-hidden"
+            className="w-[40%] sm:w-[29%]  lg:w-[24%] h-auto bg-white shadow-2xl rounded-lg overflow-hidden"
             data-aos="fade-up"
           >
             <div className="relative group">
@@ -45,7 +45,7 @@ const ParentRent = ({ scrollToTop }) => {
                 <div className="px-6 py-4 text-gray-400 flex gap-8">
                   <button
                     className="font-bold px-4 py-2 text-sm bg-white hover:bg-gray-300 hover:text-gray-500 transition duration-300 ease-in-out"
-                    // onClick={() => handleRentNow(card)}
+                   
                     onClick={() => {
                       handleRentNow(card);
                     }}
