@@ -21,7 +21,8 @@ const ForNormalBicycle = [
         price: 8.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'normal'
+        type: 'normal',
+        comp:'Regular'
     },
     {
         id: 2,
@@ -30,7 +31,9 @@ const ForNormalBicycle = [
         price: 7.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'normal'
+        type: 'normal',
+        comp:'Regular'
+
     },
     {
         id: 3,
@@ -39,7 +42,8 @@ const ForNormalBicycle = [
         price: 6.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'Racing Bike'
+        type: 'Racing Bike',
+        comp:'Regular'
     },
     {
         id: 4,
@@ -48,7 +52,8 @@ const ForNormalBicycle = [
         price: 5.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'Mountain Bike'
+        type: 'Mountain Bike',
+        comp:'Regular'
     },
     {
         id: 5,
@@ -57,7 +62,8 @@ const ForNormalBicycle = [
         price: 4.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'normal'
+        type: 'normal',
+        comp:'Regular'
     },
     {
         id: 6,
@@ -66,7 +72,8 @@ const ForNormalBicycle = [
         price: 3.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'normal'
+        type: 'normal',
+        comp:'Regular'
     },
     {
         id: 7,
@@ -75,7 +82,8 @@ const ForNormalBicycle = [
         price: 2.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'Mountain Bike'
+        type: 'Mountain Bike',
+        comp:'Regular'
     },
     {
         id: 8,
@@ -84,7 +92,8 @@ const ForNormalBicycle = [
         price: 2.99,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'normal'
+        type: 'normal',
+        comp:'Regular'
     }
 ];
 

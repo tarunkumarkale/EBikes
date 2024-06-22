@@ -26,7 +26,7 @@ const ParentRent = ({ scrollToTop }) => {
       scrollToTop();  // Call scrollToTop after navigation
     }
   };
-  console.log(scrollToTop?true:false)
+ 
   
 
   return (
@@ -50,7 +50,7 @@ const ParentRent = ({ scrollToTop }) => {
                       handleRentNow(card);
                     }}
                   >
-                    Rent Now
+                    More info
                   </button>
           
                 </div>

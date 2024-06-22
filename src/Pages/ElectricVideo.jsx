@@ -5,11 +5,7 @@ import { Navigate, useNavigate } from 'react-router-dom';
 const ElectricVideo = () => {
   const navigate = useNavigate();
 
-  // const handleNavigation = () => {
-  // debugger;
-  // console.log("hello")
-  
-  // };
+
 
   return (
     <section className="relative h-screen flex flex-col items-center justify-center text-center text-white" >

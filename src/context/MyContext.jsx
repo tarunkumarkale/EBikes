@@ -7,17 +7,21 @@ export const AllDataProvider = ({ children }) => {
   const [RentFormDataprice, setRentFormDataimageprice] = useState(null);
   const [RentFormDatatype, setRentFormDataimagetype] = useState(null);
   const [RentFormDataNAME, setRentFormDataimageNAME] = useState(null);
+  const [electricComponets,setelectricComponents]=useState(null)
 
   const setRentData = (data) => {
-    console.log(data.image)
+    
     setRentFormDataimage(data.image);
     setRentFormDataimageNAME(data.description);
     setRentFormDataimagetype(data.type);
     setRentFormDataimageprice(data.price);
+    setelectricComponents(data.comp)
+  
   };
 
+  console.log(electricComponets)
   return (
-    <AllDataContext.Provider value={{ setRentData, RentFormDataimage,RentFormDataNAME,RentFormDatatype,RentFormDataprice }}>
+    <AllDataContext.Provider value={{ setRentData, RentFormDataimage,RentFormDataNAME,RentFormDatatype,RentFormDataprice,electricComponets}}>
       {children}
     </AllDataContext.Provider>
   );
