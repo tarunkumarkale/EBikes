@@ -26,7 +26,7 @@ const CardForRegular = ({scrollToTop }) => {
       image: card.image, 
       type: card.type, 
       price: card.price,
-      comp: card.comp 
+      comp: card.comp ,tax:card.tax 
     });
     if (scrollToTop) {
       scrollToTop();

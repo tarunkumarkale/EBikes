@@ -22,6 +22,7 @@ const ForNormalBicycle = [
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
         type: 'normal',
+        tax:'8%',
         comp:'Regular'
     },
     {
@@ -32,6 +33,7 @@ const ForNormalBicycle = [
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
         type: 'normal',
+        tax:'17%',
         comp:'Regular'
 
     },
@@ -43,6 +45,7 @@ const ForNormalBicycle = [
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
         type: 'Racing Bike',
+        tax:'8%',
         comp:'Regular'
     },
     {
@@ -53,6 +56,7 @@ const ForNormalBicycle = [
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
         type: 'Mountain Bike',
+        tax:'7%',
         comp:'Regular'
     },
     {
@@ -63,6 +67,7 @@ const ForNormalBicycle = [
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
         type: 'normal',
+        tax:'3%',
         comp:'Regular'
     },
     {
@@ -73,6 +78,7 @@ const ForNormalBicycle = [
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
         type: 'normal',
+        tax:'6%',
         comp:'Regular'
     },
     {
@@ -83,6 +89,7 @@ const ForNormalBicycle = [
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
         type: 'Mountain Bike',
+        tax:'9%',
         comp:'Regular'
     },
     {
@@ -93,6 +100,7 @@ const ForNormalBicycle = [
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
         type: 'normal',
+        tax:'8%',
         comp:'Regular'
     }
 ];

@@ -8,6 +8,7 @@ export const AllDataProvider = ({ children }) => {
   const [RentFormDatatype, setRentFormDataimagetype] = useState(null);
   const [RentFormDataNAME, setRentFormDataimageNAME] = useState(null);
   const [electricComponets,setelectricComponents]=useState(null)
+  const [tax,settax]=useState(null)
 
   const setRentData = (data) => {
     
@@ -16,12 +17,13 @@ export const AllDataProvider = ({ children }) => {
     setRentFormDataimagetype(data.type);
     setRentFormDataimageprice(data.price);
     setelectricComponents(data.comp)
+    settax(data.tax)
   
   };
 
   console.log(electricComponets)
   return (
-    <AllDataContext.Provider value={{ setRentData, RentFormDataimage,RentFormDataNAME,RentFormDatatype,RentFormDataprice,electricComponets}}>
+    <AllDataContext.Provider value={{ setRentData, RentFormDataimage,RentFormDataNAME,RentFormDatatype,RentFormDataprice,electricComponets,tax}}>
       {children}
     </AllDataContext.Provider>
   );

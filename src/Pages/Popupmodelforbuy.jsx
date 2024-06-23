@@ -1,10 +1,12 @@
 // src/components/Modal.js
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { AllDataContext } from '../context/MyContext';
 
-const Modal = ({ close,  Click }) => {
-  const navigate = useNavigate();
-console.log(close)
+
+const Modal = ({ close }) => {
+      const {RentFormDataNAME,RentFormDatatype,RentFormDataprice,tax} =useContext
+      (AllDataContext)
+
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50">
       <div className="absolute inset-0 bg-gray-800 opacity-75"></div>
@@ -15,15 +17,17 @@ console.log(close)
             <tr>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Bicycle Name</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> Unit Price</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Taxes</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total</th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
               <tr>
-                <td className="px-6 py-4 whitespace-nowrap">bicycle.name</td>
-                <td className="px-6 py-4 whitespace-nowrap">bicycle.type</td>
-                <td className="px-6 py-4 whitespace-nowrap">bicycle.taxes</td>
+                <td className="px-6 py-4 whitespace-nowrap">{RentFormDataNAME}</td>
+                <td className="px-6 py-4 whitespace-nowrap">{RentFormDatatype}</td>
+                <td className="px-6 py-4 whitespace-nowrap">{RentFormDataprice}</td>
+                <td className="px-6 py-4 whitespace-nowrap">{tax}</td>
                 <td className="px-6 py-4 whitespace-nowrap">bicycle.total</td>
               </tr>
           </tbody>
