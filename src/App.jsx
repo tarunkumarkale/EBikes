@@ -17,6 +17,7 @@ import Blog from './Pages/blog';
 import Services from './components/Services';
 import RentForm from './DesignSection/Rentform';
 import { AllDataProvider } from './context/MyContext';
+import Popupmodelforbuy from './Pages/Popupmodelforbuy';
 
 
 
@@ -45,11 +46,11 @@ const MainCont = () => {
           <Route path="/About" element={<About/>} />
           <Route path="/Gallery" element={<Gallery/>} />
           <Route path="/Services" element={<Services/>}/> 
-          {/* <Route path="/RentForm" element={<RentForm/>}/>  */}
-          {/* <Route path="/RentForm/:cardId" element={<RentForm />} /> */}
+      
           <Route path="/RentForm" element={<RentForm />} />
+          <Route path="/Popupmodelforbuy" element={<Popupmodelforbuy/>} />
          
-
+         
           <Route
             path="/"
             element={

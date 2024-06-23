@@ -1,4 +1,4 @@
-import React, { useContext, useState, useRef, useEffect } from 'react';
+import {useContext,useState,useRef, useEffect } from 'react';
 import { AllDataContext } from '../context/MyContext';
 import { one } from '../constant/Index';
 import ParentRent from '../DesignSection/ParentRent';
@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 import CardForRegular from '../DesignSection/CardForRegular';
 import Cardforelectric from '../DesignSection/Cardforelectric';
+import Popupmodelforbuy from './Popupmodelforbuy';
 
 const Description = () => {
   const descriptionRef = useRef(null);
@@ -16,11 +17,11 @@ const Description = () => {
   
   const navigate = useNavigate();
 
-  const navigateToRENTFORM = () => {
-    navigate('/RentForm');
-  }
+
 
   const [renderRelatedProduct, setRenderRelatedProduct] = useState(null);
+  const [buyrent, setbuyrent] = useState(null);
+  const [checkNav, setcheckNav] = useState(null);
 
   let first = RentFormDataimage ? RentFormDataimage : one;
   let second = RentFormDataNAME ? RentFormDataNAME : 'stride';
@@ -37,18 +38,47 @@ const Description = () => {
   useEffect(() => {
     if (electricComponets === "Regular") {
       setRenderRelatedProduct(<CardForRegular scrollToTop={scrollToTop} />);
+        setbuyrent('Buy Now')
+        setcheckNav(true)
     } else if (electricComponets === "electric") {
       setRenderRelatedProduct(<Cardforelectric scrollToTop={scrollToTop} />);
+      setbuyrent('Buy Now')
+      setcheckNav(true)
     } else {
       setRenderRelatedProduct(<ParentRent scrollToTop={scrollToTop} />);
+      setbuyrent('Rent Now')
+      setcheckNav('/RentForm')
     }
   }, [electricComponets]); // Dependency array fixed to only include electricComponets
+
+
+
+
+
+
+  const [isHidden, setIsHidden] = useState(true);
+
+
+
+  const closepopup = () => {
+    setIsHidden(true);
+  };
+
+  const openPopup = () => {
+    setIsHidden(false);
+  };
+  const navigateToRENTFORM = () => {
+    navigate(checkNav);
+ openPopup()
+  }
+
+
 
   return (
     <div className='bg-white' ref={descriptionRef}>
       <div className="flex flex-col md:flex-row">
         <div className="w-full md:w-1/2 overflow-hidden relative">
-          <img src={first} alt="Product Image" className="w-full h-auto md:h-screen transition-transform duration-300 transform hover:scale-110" />
+          <img src={first} alt="Product Image" className="w-[90%] h-auto md:h-screen transition-transform duration-300 transform hover:scale-110 rounded-3xl mt-2 ml-3" />
         </div>
 
         <div className="w-full md:w-1/2 p-8">
@@ -58,7 +88,7 @@ const Description = () => {
           </div>
 
           <div className="flex items-center gap-9 mt-3">
-            <button className="px-4 py-2 bg-blue-400 text-white hover:bg-blue-800 transition duration-300" onClick={navigateToRENTFORM}>{first ? 'Rent Now' : 'Buy Now'}</button>
+            <button className="px-4 py-2 bg-blue-400 text-white hover:bg-blue-800 transition duration-300" onClick={navigateToRENTFORM}>{buyrent}</button>
             <button className="px-4 py-2 bg-black text-white hover:bg-white hover:text-black transition duration-300">Add to Cart</button>
           </div>
 
@@ -80,18 +110,24 @@ const Description = () => {
           </div>
         </div>
       </div>
-      <div className='flex justify-start flex-col p-2 sm:p-20 m-0 sm:m-6'>
-        <h1 className='text-4xl m-2 w-[20%]'>Description</h1>
-        <p className='text-base border border-gray-500 p-5'>{final_Desc}</p>
-      </div>
+      <br />
+      <br />
+      <br />
+   
 
       {/* Cards of related products */}
       <div className='flex justify-center items-center'>
-        <h1 className='text-center text-2xl scale-125 font-extrabold underline'>Related Products</h1>
+      <h1 className='text-center text-4xl font-extrabold underline bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text shadow-2xl'>Related Products</h1>
+
       </div>
+      <br />
       <div className="flex flex-wrap justify-around mb-40 mx-2 mt-2">
         {renderRelatedProduct}
       </div>
+<div className={isHidden?'hidden':''}>
+   <Popupmodelforbuy  close={closepopup}/>
+</div>
+     
     </div>
   );
 }

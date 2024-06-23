@@ -3,7 +3,7 @@ import consectetur from "../assets/imgShopR/consectetur.jpg";
 import Hailland from '../assets/imgShopR/Hailland.webp'
 import dolor from "../assets/imgShopR/dolor.jpg";
 import odio from "../assets/imgShopR/odio.jpg";
-import one from "../assets/imgShopR/one.jpg";
+import one from "../assets/imgShopR/one.png";
 import STRIDE from "../assets/img2/Stride_29.webp";
 import pro_java from "../assets/img2/pro_java_1.webp";
 
