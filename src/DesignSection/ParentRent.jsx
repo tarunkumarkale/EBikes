@@ -30,6 +30,12 @@ const ParentRent = ({ scrollToTop }) => {
   
 
   return (
+    <>
+    <div class="flex justify-center ">
+        <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-black-500 to-gray-400">
+         Rent-Bikes
+        </h1>
+    </div>
     <div className="relative w-full flex justify-around gap-8 sm:gap-32 flex-wrap bg-white mb-4">
       <div className="w-full flex justify-around gap-4 sm:gap-20 flex-wrap">
         {IndexForRent.map((card) => (
@@ -64,6 +70,7 @@ const ParentRent = ({ scrollToTop }) => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

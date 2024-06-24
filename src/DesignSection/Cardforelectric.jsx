@@ -27,6 +27,13 @@ const Cardforelectric = ({scrollToTop}) => {
   };
 
   return (
+    <>
+    <div class="flex justify-center ">
+        <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-black-500 to-gray-400">
+         E-Bikes
+        </h1>
+    </div>
+    <br />
     <div className='w-full flex justify-around gap-14 sm:gap-32 flex-wrap bg-white'>
       {ImagesElectric.map((card) => (
         <div key={card.id} className="w-[28%] sm:w-[21%] h-auto bg-white shadow-2xl rounded-lg overflow-hidden" data-aos="fade-up">
@@ -53,6 +60,7 @@ const Cardforelectric = ({scrollToTop}) => {
         </div>
       ))}
     </div>
+    </>
   );
 };
 

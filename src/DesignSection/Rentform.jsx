@@ -16,7 +16,9 @@ const RentForm = () => {
 
 
   return (
-    <div className="bg-yellow-200 min-h-screen flex justify-center items-center">
+    <>
+   
+    <div className="bg-yellow-200 min-h-screen flex justify-center items-center ">
       <div className="container mx-auto py-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div
@@ -135,6 +137,7 @@ const RentForm = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 

@@ -35,7 +35,14 @@ const CardForRegular = ({scrollToTop }) => {
   };
 
   return (
-    <div className="w-full flex justify-around gap-14 sm:gap-32 flex-wrap bg-white mb-4">
+    <> <div class="flex justify-center ">
+    <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-black-500 to-gray-400">
+     Bicycles
+    </h1>
+</div>
+<br />
+
+    <div className="mt-3 w-full flex justify-around gap-14 sm:gap-32 flex-wrap bg-white mb-4">
       {ForRegularBicycle.map((card) => (
         <div key={card.id} className="w-[28%] sm:w-[21%] h-auto bg-white shadow-2xl rounded-lg overflow-hidden" data-aos="fade-up">
           <div className="relative group">
@@ -59,6 +66,7 @@ const CardForRegular = ({scrollToTop }) => {
         </div>
       ))}
     </div>
+    </>
   );
 };
 
