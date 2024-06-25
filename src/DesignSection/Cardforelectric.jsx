@@ -6,7 +6,7 @@ import ImagesElectric from '../constant/Indexelectric';
 import { AllDataContext } from '../context/MyContext';
 
 const Cardforelectric = ({scrollToTop}) => {
-  const { setRentData } = useContext(AllDataContext);
+  const { selectRate,PriceOrder,PriceRange } = useContext(AllDataContext);
   const navigate = useNavigate();  // Importing useNavigate from react-router-dom
 
   useEffect(() => {
@@ -16,6 +16,13 @@ const Cardforelectric = ({scrollToTop}) => {
       once: true,
     });
   }, []);
+
+
+
+
+
+
+  
 
   const handleRentNow = (card) => {
     setRentData({ description: card.description, image: card.image, type: card.type, price: card.price,comp:card.comp ,tax:card.tax  });

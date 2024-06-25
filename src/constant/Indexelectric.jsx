@@ -25,6 +25,7 @@ const ImagesElectric = [
     tax:'8%',
     inStock: getRandomStockStatus(),
     animation: getRandomAnimation(),
+    rateing:' 5⭐ ',
   },
   {
     id: 2,
@@ -36,6 +37,7 @@ const ImagesElectric = [
     tax:'8%',
     inStock: getRandomStockStatus(),
     animation: getRandomAnimation(),
+    rateing:' 4⭐ ',
   },
   {
     id: 3,
@@ -47,6 +49,7 @@ const ImagesElectric = [
     tax:'8%',
     inStock: getRandomStockStatus(),
     animation: getRandomAnimation(),
+    rateing:' 3⭐ ',
   },
   {
     id: 4,
@@ -58,6 +61,7 @@ const ImagesElectric = [
     tax:'9%',
     inStock: getRandomStockStatus(),
     animation: getRandomAnimation(),
+    rateing:' 4⭐ ',
   },
   {
     id: 5,
@@ -69,6 +73,7 @@ const ImagesElectric = [
     tax:'10%',
     inStock: getRandomStockStatus(),
     animation: getRandomAnimation(),
+    rateing:' 5⭐ ',
   },
   {
     id: 6,
@@ -80,6 +85,8 @@ const ImagesElectric = [
     tax:'8%',
     inStock: getRandomStockStatus(),
     animation: getRandomAnimation(),
+rating:'4⭐'    ,
+
   },
   {
     id: 7,
@@ -91,6 +98,7 @@ const ImagesElectric = [
     tax:'8%',
     inStock: getRandomStockStatus(),
     animation: getRandomAnimation(),
+    rating:'4⭐'    ,
   },
   {
     id: 8,
@@ -102,6 +110,7 @@ const ImagesElectric = [
     tax:'8%',
     inStock: getRandomStockStatus(),
     animation: getRandomAnimation(),
+    rating:'5⭐'    ,
   },
 ];
 

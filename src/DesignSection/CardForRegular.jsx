@@ -9,7 +9,7 @@ import { AllDataContext } from '../context/MyContext';
 const CardForRegular = ({scrollToTop }) => {
   const navigate = useNavigate();
 
-  const { setRentData } = useContext(AllDataContext);
+  const { selectRate,PriceOrder,PriceRange } = useContext(AllDataContext);
 
 
   useEffect(() => {

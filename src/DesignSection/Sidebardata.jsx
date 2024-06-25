@@ -1,8 +1,12 @@
 
 
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { AllDataContext } from '../context/MyContext';
 
 const Sidebardata = () => {
+
+  const {rateingfiltar} = useContext(AllDataContext);
+
   const [selectedRatings, setSelectedRatings] = useState([]);
   const [priceRange, setPriceRange] = useState([0, 50000]);
   const [priceOrder, setPriceOrder] = useState('');
@@ -28,8 +32,10 @@ const Sidebardata = () => {
   };
 
   const handleApplyFilters = () => {
-    applyFilters({ selectedRatings, priceRange, priceOrder });
+    rateingfiltar({ selectedRatings:selectedRatings, priceRange:priceRange, priceOrder:priceOrder });
   };
+
+
 
   return (
     <div className="p-4">

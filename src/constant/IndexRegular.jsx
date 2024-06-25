@@ -23,7 +23,8 @@ const ForNormalBicycle = [
         animation: getRandomAnimation(),
         type: 'normal',
         tax:'8%',
-        comp:'Regular'
+        comp:'Regular',
+        rateing:' 4⭐ ',
     },
     {
         id: 2,
@@ -34,8 +35,8 @@ const ForNormalBicycle = [
         animation: getRandomAnimation(),
         type: 'normal',
         tax:'17%',
-        comp:'Regular'
-
+        comp:'Regular',
+        rateing:' 4⭐ ',
     },
     {
         id: 3,
@@ -46,7 +47,9 @@ const ForNormalBicycle = [
         animation: getRandomAnimation(),
         type: 'Racing Bike',
         tax:'8%',
-        comp:'Regular'
+        comp:'Regular',
+        rateing:' 3⭐ ',
+
     },
     {
         id: 4,
@@ -57,7 +60,8 @@ const ForNormalBicycle = [
         animation: getRandomAnimation(),
         type: 'Mountain Bike',
         tax:'7%',
-        comp:'Regular'
+        comp:'Regular',
+        rateing:' 5⭐ ',
     },
     {
         id: 5,
@@ -68,7 +72,8 @@ const ForNormalBicycle = [
         animation: getRandomAnimation(),
         type: 'normal',
         tax:'3%',
-        comp:'Regular'
+        comp:'Regular',
+        rateing:' 5⭐ ',
     },
     {
         id: 6,
@@ -79,7 +84,8 @@ const ForNormalBicycle = [
         animation: getRandomAnimation(),
         type: 'normal',
         tax:'6%',
-        comp:'Regular'
+        comp:'Regular',
+        rateing:' 5⭐ ',
     },
     {
         id: 7,
@@ -90,7 +96,8 @@ const ForNormalBicycle = [
         animation: getRandomAnimation(),
         type: 'Mountain Bike',
         tax:'9%',
-        comp:'Regular'
+        comp:'Regular',
+        rateing:' 3⭐ ',
     },
     {
         id: 8,
@@ -101,7 +108,8 @@ const ForNormalBicycle = [
         animation: getRandomAnimation(),
         type: 'normal',
         tax:'8%',
-        comp:'Regular'
+        comp:'Regular',
+        rateing:' 4⭐ ',
     }
 ];
 

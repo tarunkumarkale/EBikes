@@ -10,6 +10,11 @@ export const AllDataProvider = ({ children }) => {
   const [electricComponets,setelectricComponents]=useState(null)
   const [tax,settax]=useState(null)
 
+  //  🦦 for filter data
+  const [selectRate,setselectRate]=useState(null)
+  const [PriceRange,setPriceRange]=useState(null)
+  const [PriceOrder,setPriceOrder]=useState(null)
+
   const setRentData = (data) => {
     
     setRentFormDataimage(data.image);
@@ -21,9 +26,20 @@ export const AllDataProvider = ({ children }) => {
   
   };
 
-  console.log(electricComponets)
+
+  const rateingfiltar=(filterdataget)=>{
+        setselectRate(filterdataget.selectedRatings)
+        setPriceRange(filterdataget.priceRange)
+        setPriceOrder(filterdataget.priceOrder)
+  }
+
+
+
+
+  
+  
   return (
-    <AllDataContext.Provider value={{ setRentData, RentFormDataimage,RentFormDataNAME,RentFormDatatype,RentFormDataprice,electricComponets,tax}}>
+    <AllDataContext.Provider value={{ setRentData, RentFormDataimage,RentFormDataNAME,RentFormDatatype,RentFormDataprice,electricComponets,tax,rateingfiltar,selectRate,PriceOrder,PriceRange}}>
       {children}
     </AllDataContext.Provider>
   );

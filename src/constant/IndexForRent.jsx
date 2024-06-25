@@ -24,7 +24,8 @@ const IndexForRent = [
         price: 5045,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'Type : normal'
+        type: 'Type : normal',
+        rateing:' 5⭐ ',
     },
 
     {
@@ -35,7 +36,8 @@ const IndexForRent = [
         price: 8934,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-       type: 'Type : Racing Bike'
+       type: 'Type : Racing Bike',
+       rateing:' 3⭐ ',
     },
    
   {
@@ -46,7 +48,8 @@ const IndexForRent = [
         price: 72833,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'Type : normal'
+        type: 'Type : normal',
+        rateing:' 3⭐ ',
     },
        
     {
@@ -58,6 +61,7 @@ const IndexForRent = [
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
         type: 'Type : electric',
+        rateing:' 4⭐ ',
     },
     {
         id: 5,
@@ -68,6 +72,7 @@ const IndexForRent = [
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
         type: 'Type : electric',
+        rateing:' 3⭐ ',
     },
     , {
         id: 6,
@@ -78,6 +83,7 @@ const IndexForRent = [
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
         type: 'Type : electric',
+        rateing:' 4⭐ ',
     },
     {
         id: 7,
@@ -87,7 +93,9 @@ const IndexForRent = [
         price: 8940,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'Type : Mountain Bike'
+        type: 'Type : Mountain Bike',
+        rateing:' 5⭐ ',
+
     },
     {
         id: 8,
@@ -97,7 +105,8 @@ const IndexForRent = [
         price: 8924,
         inStock: getRandomStockStatus(),
         animation: getRandomAnimation(),
-        type: 'Type : normal'
+        type: 'Type : normal',
+        rateing:' 4⭐ ',
     }
 ];
 
