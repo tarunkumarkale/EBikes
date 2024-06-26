@@ -26,18 +26,23 @@ const Cardforelectric = ({ scrollToTop }) => {
     navigate('/Description');
   };
 
+
+console.log(selectRate)
+
+
+
   const ElectricCards = () => {
     return (
       <>
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-[-10%]   sm:mt-0">
           <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-black-500 to-gray-400">
             E-Bikes
           </h1>
         </div>
         <br />
-        <div className='w-full flex justify-around gap-14 sm:gap-32 flex-wrap bg-white'>
+        <div className='w-full flex justify-around  gap-2 sm:gap-32  md:gap-30  flex-wrap bg-white'>
           {ImagesElectric.map((card) => (
-            <div key={card.id} className="w-[28%] sm:w-[21%] h-auto bg-white shadow-2xl rounded-lg overflow-hidden" data-aos="fade-up">
+            <div key={card.id} className="w-[48%] sm:w-[40%]  md:w-[23%]   h-auto bg-white shadow-2xl rounded-lg overflow-hidden" data-aos="fade-up">
               <div className="relative group">
                 <img className="w-full h-auto" src={card.image} alt={card.description} />
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity"></div>
