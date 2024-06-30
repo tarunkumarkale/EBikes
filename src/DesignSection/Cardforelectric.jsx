@@ -1,7 +1,3 @@
-
-
-
-
 import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AOS from 'aos';
@@ -10,7 +6,7 @@ import ImagesElectric from '../constant/Indexelectric';
 import { AllDataContext } from '../context/MyContext';
 
 const Cardforelectric = ({ scrollToTop }) => {
-  const { selectRate } = useContext(AllDataContext);
+  const { selectRate, PriceRange } = useContext(AllDataContext);
   const [rentData, setRentData] = useState(null);
   const navigate = useNavigate();
   const [filteredData, setFilteredData] = useState(ImagesElectric);
@@ -24,14 +20,28 @@ const Cardforelectric = ({ scrollToTop }) => {
   }, []);
 
   useEffect(() => {
-    if (selectRate && selectRate.length > 0) {
-      setFilteredData(
-        ImagesElectric.filter((element) => selectRate.includes(element.rateing))
+    let filtered = ImagesElectric;
+  
+    if (PriceRange && PriceRange.length === 2) {
+      filtered = filtered.filter(
+        (element) => element.price >= PriceRange[0] && element.price <= PriceRange[1]
       );
-    } else {
-      setFilteredData(ImagesElectric);
     }
-  }, [selectRate]);
+  
+    if (selectRate && selectRate.length > 0) {
+      filtered = filtered.filter((element) => selectRate.includes(element.rateing));
+    }
+  
+    setFilteredData(filtered);
+  }, [selectRate, PriceRange]);
+  
+
+
+
+
+
+console.log(filteredData)
+
 
   const handleRentNow = (card) => {
     setRentData({
@@ -47,6 +57,9 @@ const Cardforelectric = ({ scrollToTop }) => {
     }
     navigate('/Description');
   };
+
+
+
 
   const ElectricCards = () => {
     return (
@@ -79,7 +92,7 @@ const Cardforelectric = ({ scrollToTop }) => {
                 </div>
                 <div className="flex flex-col justify-center items-center h-16">
                   <h1 className="text-black font-serif uppercase">{card.description}</h1>
-                  <h1 className="text-gray-400 font-serif">Rs:{card.price}</h1>
+                  <h1 className="text-gray-400 font-serif">Rs: {card.price}</h1>
                 </div>
               </div>
             </div>
@@ -89,11 +102,7 @@ const Cardforelectric = ({ scrollToTop }) => {
     );
   };
 
-  return (
-    <>
-      <ElectricCards />
-    </>
-  );
+  return <ElectricCards />;
 };
 
 export default Cardforelectric;
