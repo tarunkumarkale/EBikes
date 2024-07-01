@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 import ImagesElectric from '../constant/Indexelectric';
 import { AllDataContext } from '../context/MyContext';
 
-const Cardforelectric = ({ scrollToTop }) => {
+const Cardforelectric = ({ scrollToTop ,hide}) => {
   const { selectRate, PriceRange, PriceOrder,ForSearching,setRentData} = useContext(AllDataContext);
 
   const navigate = useNavigate();
@@ -87,17 +87,17 @@ console.log(ForSearching)
   const ElectricCards = () => {
     return (
       <>
-        <div className="flex justify-center mt-[-10%] sm:mt-0">
-          <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-black-500 to-gray-400">
-            E-Bikes
+      <div class="flex justify-center ">
+          <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-black-500 to-gray-400">
+           E-Bikes
           </h1>
-        </div>
-        <br />
-        <div className="w-full flex justify-around gap-2 sm:gap-32 md:gap-30 flex-wrap bg-white">
+      </div>
+      <div className="relative w-full flex justify-around gap-8 sm:gap-32 flex-wrap bg-white mb-4">
+        <div className="w-full flex justify-around gap-4 sm:gap-20 flex-wrap">
           {filteredData.map((card) => (
             <div
               key={card.id}
-              className="w-[48%] sm:w-[40%] md:w-[23%] h-auto bg-white shadow-2xl rounded-lg overflow-hidden"
+              className="w-[40%] sm:w-[29%]  lg:w-[24%] h-auto bg-white shadow-2xl rounded-lg overflow-hidden"
               data-aos="fade-up"
             >
               <div className="relative group">
@@ -107,20 +107,25 @@ console.log(ForSearching)
                   <div className="px-6 py-4 text-gray-400 flex gap-8">
                     <button
                       className="font-bold px-4 py-2 text-sm bg-white hover:bg-gray-300 hover:text-gray-500 transition duration-300 ease-in-out"
-                      onClick={() => handleRentNow(card)}
+                     
+                      onClick={() => {
+                        handleRentNow(card);
+                      }}
                     >
-                        More Info  <span className='text-red-800'>{card.rateing}</span>⭐
+                     More Info  <span className='text-red-800'>{card.rateing}</span>⭐
                     </button>
+            
                   </div>
                 </div>
-                <div className="flex flex-col justify-center items-center h-16">
-                  <h1 className="text-black font-serif uppercase">{card.description}</h1>
-                  <h1 className="text-gray-400 font-serif">Rs: {card.price}</h1>
+                <div className='flex flex-col justify-center items-center h-16'>
+                  <h1 className='text-black font-serif uppercase'>{card.description}</h1>
+                  <h1 className='text-gray-400 font-serif'>Rs:{card.price}</h1>
                 </div>
               </div>
             </div>
           ))}
         </div>
+      </div>
       </>
     );
   };

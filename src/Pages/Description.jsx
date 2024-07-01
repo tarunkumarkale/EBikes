@@ -37,15 +37,15 @@ const Description = () => {
   
   useEffect(() => {
     if (electricComponets === "Regular") {
-      setRenderRelatedProduct(<CardForRegular scrollToTop={scrollToTop} />);
+      setRenderRelatedProduct(<CardForRegular scrollToTop={scrollToTop} hide='hidden' />);
         setbuyrent('Buy Now')
         setcheckNav(true)
     } else if (electricComponets === "electric") {
-      setRenderRelatedProduct(<Cardforelectric scrollToTop={scrollToTop} />);
+      setRenderRelatedProduct(<Cardforelectric scrollToTop={scrollToTop} hide='hidden'  />);
       setbuyrent('Buy Now')
       setcheckNav(true)
     } else {
-      setRenderRelatedProduct(<ParentRent scrollToTop={scrollToTop} />);
+      setRenderRelatedProduct(<ParentRent scrollToTop={scrollToTop}  hide='hidden' />);
       setbuyrent('Rent Now')
       setcheckNav('/RentForm')
     }

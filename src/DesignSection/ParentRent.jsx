@@ -31,7 +31,7 @@ const ParentRent = ({ scrollToTop }) => {
 
   
   useEffect(() => {
-    let filtered = ImagesElectric;
+    let filtered = IndexForRent;
   
     if (PriceRange && PriceRange.length === 2) {
       filtered = filtered.filter(
