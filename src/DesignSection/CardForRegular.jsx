@@ -9,7 +9,7 @@ import { AllDataContext } from '../context/MyContext';
 const CardForRegular = ({scrollToTop }) => {
   const navigate = useNavigate();
 
-  const { selectRate, PriceRange, PriceOrder,ForSearching} = useContext(AllDataContext);
+  const { selectRate, PriceRange, PriceOrder,ForSearching,setRentData} = useContext(AllDataContext);
   const [filteredData, setFilteredData] = useState(ForRegularBicycle);
 
   useEffect(() => {

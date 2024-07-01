@@ -7,8 +7,9 @@ import { useNavigate } from 'react-router-dom';
 
 
 const ParentRent = ({ scrollToTop }) => {
-  const { setRentData } = useContext(AllDataContext);
+  const { selectRate, PriceRange, PriceOrder,ForSearching,setRentData} = useContext(AllDataContext)
   const navigate = useNavigate();
+  const [filteredData, setFilteredData] = useState(IndexForRent);
 
   useEffect(() => {
     AOS.init({
@@ -27,6 +28,47 @@ const ParentRent = ({ scrollToTop }) => {
     }
   };
  
+
+  
+  useEffect(() => {
+    let filtered = ImagesElectric;
+  
+    if (PriceRange && PriceRange.length === 2) {
+      filtered = filtered.filter(
+        (element) => element.price >= PriceRange[0] && element.price <= PriceRange[1]
+      );
+    }
+  
+    if (selectRate && selectRate.length > 0) {
+      filtered = filtered.filter((element) => selectRate.includes(element.rateing));
+    }
+
+if(ForSearching){
+  filtered = filtered.filter((element) => element.description.toLowerCase().includes(ForSearching.toLowerCase()))
+ 
+}
+
+    if (PriceOrder) {
+      filtered.sort((a, b) => {
+        
+        if (PriceOrder === 'increasing') {
+          console.log(a)
+          console.log(b)
+          return a.price - b.price;
+        } else if (PriceOrder === 'decreasing') {
+          return b.price - a.price;
+        }
+        return 0;
+      });
+    }
+
+
+
+
+  
+    setFilteredData(filtered);
+  }, [selectRate, PriceRange,PriceOrder,ForSearching]);
+  
   
 
   return (
@@ -38,7 +80,7 @@ const ParentRent = ({ scrollToTop }) => {
     </div>
     <div className="relative w-full flex justify-around gap-8 sm:gap-32 flex-wrap bg-white mb-4">
       <div className="w-full flex justify-around gap-4 sm:gap-20 flex-wrap">
-        {IndexForRent.map((card) => (
+        {filteredData.map((card) => (
           <div
             key={card.id}
             className="w-[40%] sm:w-[29%]  lg:w-[24%] h-auto bg-white shadow-2xl rounded-lg overflow-hidden"

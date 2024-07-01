@@ -11,7 +11,7 @@ import Popupmodelforbuy from './Popupmodelforbuy';
 const Description = () => {
   const descriptionRef = useRef(null);
   let Desc = "Lorem ipsum dolor sit amet consectetur adipisicing elit..."; // Your description goes here
-  let final_Desc = Desc.slice(0, 800);
+  
 
   const { RentFormDataimage, RentFormDataprice, RentFormDataNAME, electricComponets } = useContext(AllDataContext);
   

@@ -6,8 +6,8 @@ import ImagesElectric from '../constant/Indexelectric';
 import { AllDataContext } from '../context/MyContext';
 
 const Cardforelectric = ({ scrollToTop }) => {
-  const { selectRate, PriceRange, PriceOrder,ForSearching} = useContext(AllDataContext);
-  const [rentData, setRentData] = useState(null);
+  const { selectRate, PriceRange, PriceOrder,ForSearching,setRentData} = useContext(AllDataContext);
+
   const navigate = useNavigate();
   const [filteredData, setFilteredData] = useState(ImagesElectric);
 
