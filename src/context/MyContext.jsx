@@ -14,6 +14,7 @@ export const AllDataProvider = ({ children }) => {
   const [selectRate,setselectRate]=useState(null)
   const [PriceRange,setPriceRange]=useState(null)
   const [PriceOrder,setPriceOrder]=useState(null)
+  const [ForSearching,setForSearching]=useState(null)
 
   const setRentData = (data) => {
     
@@ -34,12 +35,14 @@ export const AllDataProvider = ({ children }) => {
   }
 
 
-
+const SearchingProducts=(getvaluefromuser)=>{
+  setForSearching(getvaluefromuser)
+}
 
   
   
   return (
-    <AllDataContext.Provider value={{ setRentData, RentFormDataimage,RentFormDataNAME,RentFormDatatype,RentFormDataprice,electricComponets,tax,rateingfiltar,selectRate,PriceOrder,PriceRange}}>
+    <AllDataContext.Provider value={{ setRentData, RentFormDataimage,RentFormDataNAME,RentFormDatatype,RentFormDataprice,electricComponets,tax,rateingfiltar,selectRate,PriceOrder,SearchingProducts,PriceRange,ForSearching}}>
       {children}
     </AllDataContext.Provider>
   );

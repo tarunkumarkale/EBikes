@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect,useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ForRegularBicycle from '../constant/IndexRegular';
@@ -9,8 +9,8 @@ import { AllDataContext } from '../context/MyContext';
 const CardForRegular = ({scrollToTop }) => {
   const navigate = useNavigate();
 
-  const { selectRate,PriceOrder,PriceRange } = useContext(AllDataContext);
-
+  const { selectRate, PriceRange, PriceOrder,ForSearching} = useContext(AllDataContext);
+  const [filteredData, setFilteredData] = useState(ForRegularBicycle);
 
   useEffect(() => {
     AOS.init({
@@ -19,6 +19,50 @@ const CardForRegular = ({scrollToTop }) => {
       once: true,
     });
   }, []);
+
+
+
+  useEffect(() => {
+    let filtered = ForRegularBicycle;
+  
+    if (PriceRange && PriceRange.length === 2) {
+      filtered = filtered.filter(
+        (element) => element.price >= PriceRange[0] && element.price <= PriceRange[1]
+      );
+    }
+  
+    if (selectRate && selectRate.length > 0) {
+      filtered = filtered.filter((element) => selectRate.includes(element.rateing));
+    }
+
+if(ForSearching){
+  filtered = filtered.filter((element) => element.description.toLowerCase().includes(ForSearching.toLowerCase()))
+ 
+}
+
+    if (PriceOrder) {
+      filtered.sort((a, b) => {
+        
+        if (PriceOrder === 'increasing') {
+          console.log(a)
+          console.log(b)
+          return a.price - b.price;
+        } else if (PriceOrder === 'decreasing') {
+          return b.price - a.price;
+        }
+        return 0;
+      });
+    }
+    setFilteredData(filtered);
+  }, [selectRate, PriceRange,PriceOrder,ForSearching]);
+  
+
+
+
+
+
+
+
 
   const handleRentNow = (card) => {
     setRentData({ 
@@ -43,7 +87,7 @@ const CardForRegular = ({scrollToTop }) => {
 <br />
 
     <div className="mt-3 w-full flex justify-around gap-14 sm:gap-32 flex-wrap bg-white mb-4">
-      {ForRegularBicycle.map((card) => (
+      {filteredData.map((card) => (
         <div key={card.id} className="w-[28%] sm:w-[21%] h-auto bg-white shadow-2xl rounded-lg overflow-hidden" data-aos="fade-up">
           <div className="relative group">
             <img className="w-full h-auto" src={card.image} alt={card.description} />
@@ -54,7 +98,7 @@ const CardForRegular = ({scrollToTop }) => {
                   className="font-bold px-4 py-2 text-sm bg-white hover:bg-gray-300 hover:text-gray-500 transition duration-300 ease-in-out" 
                   onClick={() => handleRentNow(card)}
                 >
-                  More Info
+                  More Info  <span className='text-red-800'>{card.rateing}</span>⭐
                 </button>
               </div>
             </div>

@@ -6,7 +6,7 @@ import ImagesElectric from '../constant/Indexelectric';
 import { AllDataContext } from '../context/MyContext';
 
 const Cardforelectric = ({ scrollToTop }) => {
-  const { selectRate, PriceRange } = useContext(AllDataContext);
+  const { selectRate, PriceRange, PriceOrder,ForSearching} = useContext(AllDataContext);
   const [rentData, setRentData] = useState(null);
   const navigate = useNavigate();
   const [filteredData, setFilteredData] = useState(ImagesElectric);
@@ -31,16 +31,39 @@ const Cardforelectric = ({ scrollToTop }) => {
     if (selectRate && selectRate.length > 0) {
       filtered = filtered.filter((element) => selectRate.includes(element.rateing));
     }
+
+if(ForSearching){
+  filtered = filtered.filter((element) => element.description.toLowerCase().includes(ForSearching.toLowerCase()))
+ 
+}
+
+    if (PriceOrder) {
+      filtered.sort((a, b) => {
+        
+        if (PriceOrder === 'increasing') {
+          console.log(a)
+          console.log(b)
+          return a.price - b.price;
+        } else if (PriceOrder === 'decreasing') {
+          return b.price - a.price;
+        }
+        return 0;
+      });
+    }
+
+
+
+
   
     setFilteredData(filtered);
-  }, [selectRate, PriceRange]);
+  }, [selectRate, PriceRange,PriceOrder,ForSearching]);
   
 
 
 
 
 
-console.log(filteredData)
+console.log(ForSearching)
 
 
   const handleRentNow = (card) => {
@@ -86,7 +109,7 @@ console.log(filteredData)
                       className="font-bold px-4 py-2 text-sm bg-white hover:bg-gray-300 hover:text-gray-500 transition duration-300 ease-in-out"
                       onClick={() => handleRentNow(card)}
                     >
-                      More Info {card.rateing}
+                        More Info  <span className='text-red-800'>{card.rateing}</span>⭐
                     </button>
                   </div>
                 </div>
