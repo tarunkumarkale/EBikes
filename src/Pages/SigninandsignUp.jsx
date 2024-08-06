@@ -1,38 +1,75 @@
-import React, { useState, useMemo } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
+import { AllDataContext } from '../context/MyContext';
+import { useNavigate } from 'react-router-dom';
 
 const SigninandsignUp = () => {
   const [isSignUp, setIsSignUp] = useState(false);
+  const [loginEmail, setLoginEmail] = useState('');
+  const [loginPassword, setLoginPassword] = useState('');
+  const [signupEmail, setSignupEmail] = useState('');
+  const [signupPassword, setSignupPassword] = useState('');
+  const [error, setError] = useState(null);
+
+  const { signInWithEmailAndPasswordFunc, signUpWithEmailAndPassword, user } = useContext(AllDataContext);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (user) {
+      navigate('/');
+    }
+  }, [user, navigate]);
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    // Handle login logic here
-    console.log('Login Submitted');
+    setError(null); // Clear previous errors
+    signInWithEmailAndPasswordFunc(loginEmail, loginPassword)
+      .then((userCredential) => {
+        console.log('Login successful:', userCredential);
+        navigate('/'); // Navigate to home after successful login
+      })
+      .catch((error) => {
+        console.error('Login error:', error);
+        setError(error.message);
+      });
   };
 
   const handleSignUpSubmit = (e) => {
     e.preventDefault();
-    // Handle sign-up logic here
-    console.log('Sign Up Submitted');
+    setError(null); // Clear previous errors
+    signUpWithEmailAndPassword(signupEmail, signupPassword)
+      .then((userCredential) => {
+        console.log('Sign up successful:', userCredential);
+        navigate('/'); // Navigate to home after successful sign up
+      })
+      .catch((error) => {
+        console.error('Sign up error:', error);
+        setError(error.message);
+      });
   };
 
-  const loginForm = useMemo(() => (
+  const loginForm = (
     <>
       <h1 className="text-2xl font-bold mb-6 text-center">Login</h1>
+      {error && <div className="mb-4 text-red-500">{error}</div>}
       <form onSubmit={handleLoginSubmit}>
         <div className="mb-4">
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+          <label htmlFor="loginEmail" className="block text-sm font-medium text-gray-700">Email</label>
           <input
             type="email"
-            id="email"
+            id="loginEmail"
+            value={loginEmail}
+            onChange={(e) => setLoginEmail(e.target.value)}
             required
             className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
           />
         </div>
         <div className="mb-6">
-          <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
+          <label htmlFor="loginPassword" className="block text-sm font-medium text-gray-700">Password</label>
           <input
             type="password"
-            id="password"
+            id="loginPassword"
+            value={loginPassword}
+            onChange={(e) => setLoginPassword(e.target.value)}
             required
             className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
           />
@@ -55,35 +92,31 @@ const SigninandsignUp = () => {
         Sign Up
       </button>
     </>
-  ), []);
+  );
 
-  const signUpForm = useMemo(() => (
+  const signUpForm = (
     <>
       <h1 className="text-2xl font-bold mb-6 text-center">Sign Up</h1>
+      {error && <div className="mb-4 text-red-500">{error}</div>}
       <form onSubmit={handleSignUpSubmit}>
         <div className="mb-4">
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
-          <input
-            type="text"
-            id="name"
-            required
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+          <label htmlFor="signupEmail" className="block text-sm font-medium text-gray-700">Email</label>
           <input
             type="email"
-            id="email"
+            id="signupEmail"
+            value={signupEmail}
+            onChange={(e) => setSignupEmail(e.target.value)}
             required
             className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
           />
         </div>
         <div className="mb-6">
-          <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
+          <label htmlFor="signupPassword" className="block text-sm font-medium text-gray-700">Password</label>
           <input
             type="password"
-            id="password"
+            id="signupPassword"
+            value={signupPassword}
+            onChange={(e) => setSignupPassword(e.target.value)}
             required
             className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
           />
@@ -106,7 +139,7 @@ const SigninandsignUp = () => {
         Back to Login
       </button>
     </>
-  ), []);
+  );
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
