@@ -18,6 +18,7 @@ import Services from './components/Services';
 import RentForm from './DesignSection/Rentform';
 import { AllDataProvider } from './context/MyContext';
 import Popupmodelforbuy from './Pages/Popupmodelforbuy';
+import SigninandsignUp from './Pages/SigninandsignUp';
 
 
 
@@ -46,6 +47,7 @@ const MainCont = () => {
           <Route path="/About" element={<About/>} />
           <Route path="/Gallery" element={<Gallery/>} />
           <Route path="/Services" element={<Services/>}/> 
+          <Route path='/SigninandsignUp' element={<SigninandsignUp/>}/>
       
           <Route path="/RentForm" element={<RentForm />} />
           <Route path="/Popupmodelforbuy" element={<Popupmodelforbuy/>} />

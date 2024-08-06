@@ -1,4 +1,16 @@
 import React, { createContext, useState } from "react";
+// import {
+//   getAuth,
+//   createUserWithEmailAndPassword,
+//   signInWithEmailAndPassword,
+//   GoogleAuthProvider,
+//   signInWithPopup,
+//   onAuthStateChanged,
+// } from 'firebase/auth';                          ///   👿  for auththetication only 
+
+// import { app } from "./Firebase";
+
+
 
 export const AllDataContext = createContext(null);
 

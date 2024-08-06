@@ -111,7 +111,14 @@ const Header = () => {
                   >
                     Contact
                   </Link>
+                
                 </li>
+                <li> <Link to="/SigninandsignUp"
+                    class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent  md:p-0 dark:text-white  headingLink poetsen-one-regular2"
+                  >
+                    Sign UP
+                  </Link></li>
+               
               </ul>
             </div>
           )}
