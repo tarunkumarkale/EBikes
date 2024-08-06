@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import Carousel from "./Carousel";
 import HeroDesign from "../DesignSection/HeroDesign";
 import ElectricVideo from "./ElectricVideo";
@@ -7,13 +7,13 @@ import Rent from "./RentCyleHero";
 import GreenCycle from "./GreenCycle";
 
 const Hero = () => {
-  let slides = [
+  const slides = useMemo(() => [
     <ElectricVideo key="1" />,  // video of demo
     <HeroDesign key="2" />, // normal bike
     <Three key="3" />, // electric bike
     <Rent key="4" />,  // rent bike
     <GreenCycle key="5" />  // environment
-  ];
+  ], []); // Empty dependency array ensures that slides are only created once
 
   return (
     <div className="w-full h-full">
@@ -25,9 +25,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
-
-
-
-
