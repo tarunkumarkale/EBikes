@@ -59,6 +59,16 @@ const SearchingProducts=(getvaluefromuser)=>{
 }
 
 
+const [forlogologin,setforlogologin]=useState(null)
+
+
+const Forsigintextlogo = (name) => {
+  const nameParts = name.trim().split(' ');
+  const initials = nameParts.map(word => word[0].toUpperCase()).join('');
+  setforlogologin(initials)
+  return initials
+
+};
 
 
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -104,7 +114,7 @@ const islogin = !!user; // Convert user object to a boolean
   
   return (
     <AllDataContext.Provider value={{ setRentData, RentFormDataimage,RentFormDataNAME,RentFormDatatype,RentFormDataprice,electricComponets,tax,rateingfiltar,selectRate,PriceOrder,SearchingProducts,PriceRange,ForSearching,signUpWithEmailAndPassword,signInWithEmailAndPasswordFunc,islogin,
-        user }}>
+        user ,Forsigintextlogo,forlogologin}}>
       {children}
     </AllDataContext.Provider>
   );

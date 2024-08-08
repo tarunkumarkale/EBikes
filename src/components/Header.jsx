@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AllDataContext } from "../context/MyContext";
+
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const {forlogologin}=useContext(AllDataContext)
+
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -75,12 +80,12 @@ const Header = () => {
                   Contacts
                 </Link>
               
-                  <Link
-                    to="/SigninandsignUp"
-                    className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white headingLink poetsen-one-regular2"
-                  >
-                    Sign UP
-                  </Link>
+                <Link
+  to="/SigninandsignUp"
+ className="flex items-center justify-center text-green-800 bg-white rounded-full poetsen-one-regular2"
+>
+   {forlogologin? forlogologin: 'Sign Up' }
+</Link>
            
               </div>
             </div>
@@ -131,9 +136,10 @@ const Header = () => {
                 <li>
                   <Link
                     to="/SigninandsignUp"
-                    className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white headingLink poetsen-one-regular2"
+                   
+                  className="block py-2 px-3 text-green-800  rounded-full md:bg-transparent md:p-0  headingLink poetsen-one-regular2"
                   >
-                    Sign UP
+                    {forlogologin? forlogologin: 'Sign Up' }
                   </Link>
                 </li>
               </ul>
