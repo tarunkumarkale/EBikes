@@ -2,12 +2,13 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AllDataContext } from '../context/MyContext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 const Modal = ({ close }) => {
-  const { RentFormDataNAME, RentFormDatatype, RentFormDataprice, tax } = useContext(AllDataContext);
-  console.log(tax);
+  const { RentFormDataNAME, RentFormDatatype, RentFormDataprice, tax,handleCreateBuyOrders,RentFormDataimage}=useContext(AllDataContext);
+const navi=useNavigate()
   const [total, setTotal] = useState(0); // Initialize total with a default value
-  
+  const[forname,setforname]=useState('')
   useEffect(() => {
    
       let parsedRentFormDataprice = parseInt(RentFormDataprice);
@@ -29,9 +30,15 @@ const Modal = ({ close }) => {
       progress: undefined,
       theme: "light"
     });
+    handleCreateBuyOrders(forname,RentFormDataNAME, RentFormDatatype, RentFormDataprice,RentFormDataimage)
+
+    console.log(RentFormDataimage)
+
+
+// name,bicyclename,bicycletype,price,cover
   };
 
-  console.log(total);
+
   return (
     <>
       <div className="fixed inset-0 flex items-center justify-center z-50">
@@ -39,7 +46,7 @@ const Modal = ({ close }) => {
         <div className="bg-white rounded-lg shadow-lg p-8 z-10">
           <h2 className="text-3xl font-bold mb-4 w-full text-black py-2 px-4">Payment Form </h2>
 
-          <input type="text" placeholder="Enter your name" className="w-full py-2 px-4 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500 text-gray-700"/>
+          <input type="text" placeholder="Enter your name" className="w-full py-2 px-4 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500 text-gray-700" onChange={(e) => setforname(e.target.value)} value={forname}/>
 
           <br />
           <br />
@@ -98,6 +105,8 @@ const Modal = ({ close }) => {
             <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onClick={notify}>
               Buy Now
             </button>
+
+            
           </div>
         </div>
       </div>

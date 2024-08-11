@@ -19,6 +19,7 @@ import RentForm from './DesignSection/Rentform';
 import { AllDataProvider } from './context/MyContext';
 import Popupmodelforbuy from './Pages/Popupmodelforbuy';
 import SigninandsignUp from './Pages/SigninandsignUp';
+import AllOrderProducts from './Pages/AllOrderProducts';
 
 
 
@@ -48,6 +49,7 @@ const MainCont = () => {
           <Route path="/Gallery" element={<Gallery/>} />
           <Route path="/Services" element={<Services/>}/> 
           <Route path='/SigninandsignUp' element={<SigninandsignUp/>}/>
+          <Route path='/AllOrderProducts' element={<AllOrderProducts/>}/>
       
           <Route path="/RentForm" element={<RentForm />} />
           <Route path="/Popupmodelforbuy" element={<Popupmodelforbuy/>} />

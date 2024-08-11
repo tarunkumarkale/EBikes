@@ -79,6 +79,12 @@ const Header = () => {
                 >
                   Contacts
                 </Link>
+                <Link
+                  to="/AllOrderProducts"
+                  className="block px-4 py-2 text-gray-800 hover:text-green-700 hover:bg-gray-200 text-center headingLink poetsen-one-regular2"
+                >
+                  Check Orders
+                </Link>
               
                 <Link
   to="/SigninandsignUp"
@@ -131,6 +137,14 @@ const Header = () => {
                     className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white headingLink poetsen-one-regular2"
                   >
                     Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/AllOrderProducts"
+                    className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white headingLink poetsen-one-regular2"
+                  >
+                       Check Orders
                   </Link>
                 </li>
                 <li>
