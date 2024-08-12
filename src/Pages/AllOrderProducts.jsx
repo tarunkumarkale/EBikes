@@ -34,7 +34,7 @@ const AllOrderProducts = () => {
                 <span className="font-bold text-lg  ">Type:</span> {order.bicycletype}
               </p>
               <p className="text-lg font-semibold text-red-700">
-                <span className="font-bold text-lg ">Price:</span> ${order.price}
+                <span className="font-bold text-lg ">Price:</span> ₹ {order.price}
               </p>
             </div>
           </div>

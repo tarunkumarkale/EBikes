@@ -175,7 +175,7 @@ const handleCreateBuyOrders = async (name, bicyclename, bicycletype, price, cove
 
   useEffect(() => {
     processBuyOrderData();
-  }, []);
+  }, [orders]);
 
 
 
