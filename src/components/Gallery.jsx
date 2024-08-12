@@ -44,7 +44,7 @@ const Gallery = () => {
             <img
               src={image}
               alt={`Gallery ${index}`}
-              className="w-full h-48 object-cover"
+              className="w-full h-48 object-cover" loading='lazy'
             />
           </div>
         ))}
@@ -61,7 +61,7 @@ const Gallery = () => {
             >
               <FaArrowLeft />
             </button>
-            <img src={images[currentImage]} alt={`Gallery ${currentImage}`} className="max-h-screen" />
+            <img src={images[currentImage]} alt={`Gallery ${currentImage}`} className="max-h-screen"  loading='lazy'/>
             <button
               className="absolute right-0 transform translate-x-full -translate-y-1/2 p-4 bg-white rounded-full"
               onClick={nextImage}
