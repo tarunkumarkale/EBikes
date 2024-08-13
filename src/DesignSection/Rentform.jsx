@@ -14,7 +14,7 @@ const RentForm = () => {
     <>
       <div className="bg-yellow-200 min-h-screen flex justify-center items-center">
         <div className="container mx-auto py-10">
-          {/* <h1 className="text-3xl font-bold text-center mb-8">Rent a Bike </h1> */}
+          {/* <h1 className="text-3xl font-bold text-center mb-8">Rent  Bike </h1> */}
           <p className="text-center text-red-600 mb-8">Note: Rent bike service is applicable in Bhopal only. Users from other areas cannot book a rent bike.</p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

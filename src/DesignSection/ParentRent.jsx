@@ -98,14 +98,16 @@ if(ForSearching){
                       handleRentNow(card);
                     }}
                   >
-                    More info
+                    More info  <span className='text-red-600'> {card.rateing}</span>
                   </button>
           
                 </div>
               </div>
               <div className='flex flex-col justify-center items-center h-16'>
                 <h1 className='text-black font-serif uppercase'>{card.NAME}</h1>
-                <h1 className='text-gray-400 font-serif'>Rs:{card.price}</h1>
+                <h1 className="text-lg font-semibold text-blue-600 font-serif">
+  Per Day Price: <span className="text-gray-800">₹{card.OneDayprice}</span>
+</h1>
               </div>
             </div>
           </div>
