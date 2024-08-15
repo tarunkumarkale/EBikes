@@ -29,7 +29,7 @@ const Description = () => {
     }
   };
 
-  console.log(electricComponets);
+  
   
   useEffect(() => {
     if (electricComponets === "Regular") {
@@ -93,7 +93,7 @@ const Description = () => {
         <div className="w-full md:w-1/2 p-8">
           <h2 className="text-2xl font-bold mb-4">{second}</h2>
           <div className="flex justify-between items-center mb-4">
-            <p className="text-lg font-semibold">Rs:{third}</p>
+
           </div>
 
           <div className="flex items-center gap-9 mt-3">

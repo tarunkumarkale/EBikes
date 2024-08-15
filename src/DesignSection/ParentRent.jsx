@@ -10,6 +10,7 @@ const ParentRent = ({ scrollToTop }) => {
   const { selectRate, PriceRange, PriceOrder,ForSearching,setRentData} = useContext(AllDataContext)
   const navigate = useNavigate();
   const [filteredData, setFilteredData] = useState(IndexForRent);
+  const [moneyRent, setmoneyRent] = useState(null);
 
   useEffect(() => {
     AOS.init({
@@ -17,15 +18,19 @@ const ParentRent = ({ scrollToTop }) => {
       easing: 'ease-in-out',
       once: true,
     });
+    
+
   }, []);
 
+ 
   const handleRentNow = (card) => {
-    setRentData({ description: card.NAME, image: card.image, type: card.type, price: card.price });
-    
+    setRentData({ description: card.NAME, image: card.image, type: card.type, OneDayprice: card.OneDayprice });
+    console.log(card.OneDayprice)    
     navigate(`/Description`);
     if (scrollToTop) {
       scrollToTop();  // Call scrollToTop after navigation
     }
+    // setmoneyRent(card.OneDayprice)
   };
  
 
@@ -106,7 +111,7 @@ if(ForSearching){
               <div className='flex flex-col justify-center items-center h-16'>
                 <h1 className='text-black font-serif uppercase'>{card.NAME}</h1>
                 <h1 className="text-lg font-semibold text-blue-600 font-serif">
-  Per Day Price: <span className="text-gray-800">₹{card.OneDayprice}</span>
+  Per Day Price: <span className="text-gray-800" >₹{card.OneDayprice}</span>
 </h1>
               </div>
             </div>

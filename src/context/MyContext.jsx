@@ -36,6 +36,10 @@ export const AllDataProvider = ({ children }) => {
   const [electricComponets,setelectricComponents]=useState(null)
   const [tax,settax]=useState(null)
 
+const [moneydetailRent,setmoneydetailRent]=useState(null)
+
+
+
   //  🦦 for filter data
   const [selectRate,setselectRate]=useState(null)
   const [PriceRange,setPriceRange]=useState(null)
@@ -50,9 +54,11 @@ export const AllDataProvider = ({ children }) => {
     setRentFormDataimageprice(data.price);
     setelectricComponents(data.comp)
     settax(data.tax)
+    setmoneydetailRent(data.OneDayprice)
   
   };
 
+  // console.log(moneydetailRent)
 
   const rateingfiltar=(filterdataget)=>{
         setselectRate(filterdataget.selectedRatings)
@@ -77,6 +83,9 @@ const Forsigintextlogo = (name) => {
 
 };
 
+
+
+// console.log(moneydetailRent)
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
@@ -188,7 +197,7 @@ const handleCreateBuyOrders = async (name, bicyclename, bicycletype, price, cove
   
   return (
     <AllDataContext.Provider value={{ setRentData, RentFormDataimage,RentFormDataNAME,RentFormDatatype,RentFormDataprice,electricComponets,tax,rateingfiltar,selectRate,PriceOrder,SearchingProducts,PriceRange,ForSearching,signUpWithEmailAndPassword,signInWithEmailAndPasswordFunc,islogin,
-        user ,Forsigintextlogo,forlogologin,handleCreateBuyOrders,orders}}>
+        user ,Forsigintextlogo,forlogologin,handleCreateBuyOrders,orders,moneydetailRent}}>
       {children}
     </AllDataContext.Provider>
   );

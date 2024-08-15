@@ -4,10 +4,11 @@ import AOS from "aos";
 import { AllDataContext } from "../context/MyContext";
 
 const RentForm = () => {
-  const { RentFormDataNAME, RentFormDatatype } = useContext(AllDataContext);
+  const { RentFormDataNAME, RentFormDatatype,moneydetailRent } = useContext(AllDataContext);
 
   useEffect(() => {
     AOS.init();
+    console.log(moneydetailRent)
   }, []);
 
   return (
@@ -25,7 +26,7 @@ const RentForm = () => {
               style={{ height: "150px" }}
             >
               <h2 className="text-xl font-semibold mb-2">One Day Price</h2>
-              <p className="text-gray-600">Price: ₹20</p>
+              <p className="text-gray-600">Price: ₹{moneydetailRent}</p>
             </div>
             <div
               className="p-4 rounded-lg shadow-md bg-slate-400"
