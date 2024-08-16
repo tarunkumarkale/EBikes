@@ -196,7 +196,7 @@ const Cardforelectric = ({ scrollToTop, hide }) => {
                 className="w-[40%] sm:w-[29%] lg:w-[24%] h-auto bg-white shadow-2xl rounded-lg overflow-hidden"
               >
                 <div className="relative group">
-                  <img className="w-full h-auto" src={card.image} alt={card.description} />
+                  <img className="w-full h-auto" src={card.image} alt={card.description} loading='lazy'/>
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity"></div>
                   <div className="absolute inset-x-0 bottom-0 bg-gray-800 opacity-0 group-hover:opacity-100 transition-transform transform translate-y-full group-hover:translate-y-0 mb-14">
                     <div className="px-6 py-4 text-gray-400 flex gap-8">

@@ -120,13 +120,13 @@ useEffect(() => {
 const islogin = !!user; // Convert user object to a boolean
 
 
-
+// ===========================================================================================================================================================================================
 
 const firestore = getFirestore(app); // Firestore instance document
 const storage = getStorage(app); // image and audio and video
 
 
-  // Function to create product Buyorder
+  // Function to create product Buyorder connect to firebase and storage
 
 
 const handleCreateBuyOrders = async (name, bicyclename, bicycletype, price, coverUrl) => {
@@ -188,16 +188,72 @@ const handleCreateBuyOrders = async (name, bicyclename, bicycletype, price, cove
 
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// for rent  bike here we start
 
+const handleCreateRentOrder = async(fullname,Address,pincode,Contact,bicyclenameanddetail,onedayRent,coverUrl,pickupDate,ReturnDate) => {
+  try {
+    // Fetch the image from the URL and convert it into a Blob
+    const response = await fetch(coverUrl);
+    const blob = await response.blob();   // this is the way of convert to blob
 
+    // Create a reference for the image in Firebase Storage
+    const imageRef = ref(storage, `uploads/images/${Date.now()}-${fullname}.jpg`); // Use name or any other identifier
 
+    // Upload the Blob to Firebase Storage
+    const uploadResult = await uploadBytes(imageRef, blob);
+    console.log("Image uploaded successfully:", uploadResult);
+
+    // Get the download URL of the uploaded image
+    const downloadURL = await getDownloadURL(uploadResult.ref);
+    console.log("Download URL:", downloadURL);
+
+    // Create a new document in the 'Rentproducts' collection in Firestore
+    const newDocRef = await addDoc(collection(firestore, 'Rentproducts'), {
+      fullname,
+      Address,
+      pincode,Contact,
+      bicyclenameanddetail,
+      onedayRent,
+      pickupDate,ReturnDate,
+      imageURL: downloadURL, // Store the download URL in Firestore
+    });
+
+    console.log("Buy order created successfully:",newDocRef.id);
+    return newDocRef;
+  } catch (error) {
+    console.error("Error creating buy order:", error.message);
+    throw error;  // Optionally rethrow the error after logging
+  }
+};
+
+const [RENTorders, setRENTOrders] = useState([]);
+
+const processRENTOrderData = async () => {
+  try {
+    const querySnapshot = await getDocs(collection(firestore, "Rentproducts"));
+    const ordersData = [];
+
+    querySnapshot.forEach((doc) => {
+      ordersData.push(doc.data());
+    });
+
+    setRENTOrders(ordersData);
+  } catch (error) {
+    console.error("Error processing buy order data: ", error.message);
+  }
+};
+
+useEffect(() => {
+  processRENTOrderData();
+}, [RENTorders]);
 
 
   
   
   return (
     <AllDataContext.Provider value={{ setRentData, RentFormDataimage,RentFormDataNAME,RentFormDatatype,RentFormDataprice,electricComponets,tax,rateingfiltar,selectRate,PriceOrder,SearchingProducts,PriceRange,ForSearching,signUpWithEmailAndPassword,signInWithEmailAndPasswordFunc,islogin,
-        user ,Forsigintextlogo,forlogologin,handleCreateBuyOrders,orders,moneydetailRent}}>
+        user,Forsigintextlogo,forlogologin,handleCreateBuyOrders,orders,moneydetailRent,RENTorders,handleCreateRentOrder,RENTorders   }}>
       {children}
     </AllDataContext.Provider>
   );

@@ -93,6 +93,7 @@ const CardForRegular = ({ scrollToTop }) => {
                   className="w-full h-auto"
                   src={card.image}
                   alt={card.description}
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity"></div>
                 <div className="absolute inset-x-0 bottom-0 bg-gray-800 opacity-0 group-hover:opacity-100 transition-transform transform translate-y-full group-hover:translate-y-0 mb-14">
