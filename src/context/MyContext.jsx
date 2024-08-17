@@ -28,9 +28,8 @@ export const AllDataProvider = ({ children }) => {
 
 
 
-
-  const [RentFormDataimage, setRentFormDataimage] = useState(null);
-  const [RentFormDataprice, setRentFormDataimageprice] = useState(null);
+  const [RentFormDataimage,setRentFormDataimage] = useState(null);
+  const [RentFormDataprice,setRentFormDataimageprice] = useState(null);
   const [RentFormDatatype, setRentFormDataimagetype] = useState(null);
   const [RentFormDataNAME, setRentFormDataimageNAME] = useState(null);
   const [electricComponets,setelectricComponents]=useState(null)
@@ -249,11 +248,64 @@ useEffect(() => {
 }, [RENTorders]);
 
 
+
+//////////////////////////////////////////////////////////////////////////////////
+// here Addtocart 
+
+const [cartItems, setCartItems] = useState([]);
+
+
+const ADDTOCART = async (img, Nameproduct, price, type, alltax, forRentmoney) => {
+  try {
+    // Fetch the image from the URL and convert it into a Blob
+    const response = await fetch(img);
+    const blob = await response.blob();
+
+    // Create a reference for the image in Firebase Storage
+    const imageRef = ref(storage, `uploads/images/${Date.now()}-${Nameproduct}.jpg`);
+
+    // Upload the Blob to Firebase Storage
+    const uploadResult = await uploadBytes(imageRef, blob);
+    console.log("Image uploaded successfully:", uploadResult);
+
+    // Get the download URL of the uploaded image
+    const downloadURL = await getDownloadURL(uploadResult.ref);
+    console.log("Download URL:", downloadURL);
+
+    // Prepare the data object
+    const data = {
+      Nameproduct: Nameproduct || "",  // Provide a default value if undefined
+      price: price !== undefined ? price : 0,  // Ensure price is defined
+      type: type || "",
+      alltax: alltax !== undefined ? alltax : 0,
+      imageURL: downloadURL,
+    };
+
+    // Only add forRentmoney if it's defined
+    if (forRentmoney !== undefined) {
+      data.forRentmoney = forRentmoney;
+    }
+
+    // Update the state with the new cart item
+    setCartItems(prevItems => [...prevItems, data]);
+
+    // Create a new document in the 'addtocart' collection in Firestore
+    const newDocRef = await addDoc(collection(firestore, 'addtocart'), data);
+
+    console.log("Buy order created successfully:", newDocRef.id);
+    return newDocRef;
+  } catch (error) {
+    console.error("Error creating buy order:", error.message);
+    throw error;  // Optionally rethrow the error after logging
+  }
+};
+
+
   
   
   return (
     <AllDataContext.Provider value={{ setRentData, RentFormDataimage,RentFormDataNAME,RentFormDatatype,RentFormDataprice,electricComponets,tax,rateingfiltar,selectRate,PriceOrder,SearchingProducts,PriceRange,ForSearching,signUpWithEmailAndPassword,signInWithEmailAndPasswordFunc,islogin,
-        user,Forsigintextlogo,forlogologin,handleCreateBuyOrders,orders,moneydetailRent,RENTorders,handleCreateRentOrder,RENTorders   }}>
+        user,Forsigintextlogo,forlogologin,handleCreateBuyOrders,orders,moneydetailRent,RENTorders,handleCreateRentOrder,ADDTOCART,cartItems  }}>
       {children}
     </AllDataContext.Provider>
   );

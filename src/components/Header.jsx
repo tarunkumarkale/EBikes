@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AllDataContext } from "../context/MyContext";
-
+import { MdAddShoppingCart } from "react-icons/md";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -92,6 +92,15 @@ const Header = () => {
 >
    {forlogologin? forlogologin: 'Sign Up' }
 </Link>
+
+
+
+<Link
+  to="/ADDtocart"
+ className="flex items-center justify-center text-green-800 bg-white rounded-full poetsen-one-regular2"
+>
+ < MdAddShoppingCart />
+</Link>
            
               </div>
             </div>
@@ -155,6 +164,14 @@ const Header = () => {
                   >
                     {forlogologin? forlogologin: 'Sign Up' }
                   </Link>
+                </li>
+                <li>
+                <Link
+  to="/ADDtocart"
+  className="block py-2 px-3 text-white rounded-full md:bg-transparent md:p-0 headingLink poetsen-one-regular2"
+>
+  <MdAddShoppingCart className="text-3xl" />
+</Link>
                 </li>
               </ul>
             </div>

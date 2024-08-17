@@ -20,6 +20,7 @@ import { AllDataProvider } from './context/MyContext';
 import Popupmodelforbuy from './Pages/Popupmodelforbuy';
 import SigninandsignUp from './Pages/SigninandsignUp';
 import AllOrderProducts from './Pages/AllOrderProducts';
+import Addtocart from './Pages/Addtocart';
 
 
 
@@ -50,7 +51,7 @@ const MainCont = () => {
           <Route path="/Services" element={<Services/>}/> 
           <Route path='/SigninandsignUp' element={<SigninandsignUp/>}/>
           <Route path='/AllOrderProducts' element={<AllOrderProducts/>}/>
-      
+      <Route path='/ADDtocart' element={<Addtocart/>}   />
           <Route path="/RentForm" element={<RentForm />} />
           <Route path="/Popupmodelforbuy" element={<Popupmodelforbuy/>} />
          

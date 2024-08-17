@@ -12,7 +12,7 @@ const Description = () => {
   const descriptionRef = useRef(null);
   let Desc = "Lorem ipsum dolor sit amet consectetur adipisicing elit..."; // Your description goes here
   
-  const { RentFormDataimage, RentFormDataprice, RentFormDataNAME, electricComponets } = useContext(AllDataContext);
+  const { RentFormDataimage, RentFormDataprice, RentFormDataNAME, electricComponets, tax,RentFormDatatype,ADDTOCART,moneydetailRent} = useContext(AllDataContext);
   const navigate = useNavigate();
 
   const [renderRelatedProduct, setRenderRelatedProduct] = useState(null);
@@ -29,7 +29,20 @@ const Description = () => {
     }
   };
 
+
+  const Addtocart = () => {
+    const img = RentFormDataimage;
+    const price = RentFormDataprice;
+    const Namepro = RentFormDataNAME;
+    const type = RentFormDatatype;
+    const alltax = tax;
+  const moneydetailrent=moneydetailRent
+    ADDTOCART(img, Namepro, price, type, alltax,moneydetailrent);
+  }
   
+
+
+
   
   useEffect(() => {
     if (electricComponets === "Regular") {
@@ -98,7 +111,7 @@ const Description = () => {
 
           <div className="flex items-center gap-9 mt-3">
             <button className="px-4 py-2 bg-blue-400 text-white hover:bg-blue-800 transition duration-300" onClick={navigateToRENTFORM}>{buyrent}</button>
-            <button className="px-4 py-2 bg-black text-white hover:bg-white hover:text-black transition duration-300">Add to Cart</button>
+            <button className="px-4 py-2 bg-black text-white hover:bg-white hover:text-black transition duration-300" onClick={Addtocart}>Add to Cart</button>
           </div>
 
           <div>

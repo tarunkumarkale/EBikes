@@ -7,10 +7,11 @@ import { useNavigate } from 'react-router-dom';
 
 
 const ParentRent = ({ scrollToTop }) => {
+
   const { selectRate, PriceRange, PriceOrder,ForSearching,setRentData} = useContext(AllDataContext)
   const navigate = useNavigate();
   const [filteredData, setFilteredData] = useState(IndexForRent);
-  const [moneyRent, setmoneyRent] = useState(null);
+  // const [moneyRent, setmoneyRent] = useState(null);
 
   useEffect(() => {
     AOS.init({
@@ -22,10 +23,11 @@ const ParentRent = ({ scrollToTop }) => {
 
   }, []);
 
- 
+
   const handleRentNow = (card) => {
     setRentData({ description: card.NAME, image: card.image, type: card.type, OneDayprice: card.OneDayprice });
     console.log(card.OneDayprice)    
+    
     navigate(`/Description`);
     if (scrollToTop) {
       scrollToTop();  // Call scrollToTop after navigation
