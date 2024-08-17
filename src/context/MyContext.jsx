@@ -252,6 +252,7 @@ useEffect(() => {
 //////////////////////////////////////////////////////////////////////////////////
 // here Addtocart 
 
+
 const [cartItems, setCartItems] = useState([]);
 
 
@@ -305,7 +306,7 @@ const ADDTOCART = async (img, Nameproduct, price, type, alltax, forRentmoney) =>
   
   return (
     <AllDataContext.Provider value={{ setRentData, RentFormDataimage,RentFormDataNAME,RentFormDatatype,RentFormDataprice,electricComponets,tax,rateingfiltar,selectRate,PriceOrder,SearchingProducts,PriceRange,ForSearching,signUpWithEmailAndPassword,signInWithEmailAndPasswordFunc,islogin,
-        user,Forsigintextlogo,forlogologin,handleCreateBuyOrders,orders,moneydetailRent,RENTorders,handleCreateRentOrder,ADDTOCART,cartItems  }}>
+        user,Forsigintextlogo,forlogologin,handleCreateBuyOrders,orders,moneydetailRent,RENTorders,handleCreateRentOrder,ADDTOCART,cartItems,setCartItems  }}>
       {children}
     </AllDataContext.Provider>
   );
